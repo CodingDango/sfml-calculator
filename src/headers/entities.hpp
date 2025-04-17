@@ -1,7 +1,16 @@
+#pragma once
+
 #include <functional>
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
+// Forward declarations
+namespace helpers
+{
+    sf::Color modifyColorByFactor(sf::Color color, float factor);
+}
+
+// Declarations
 class Button : public sf::Sprite
 {   
 public:
@@ -11,6 +20,8 @@ public:
 
 private:
     std::function<void()> click_callback;
+    sf::Color hover_color;
+    sf::Color normal_color;
 };
 
 struct ButtonContainer : public std::vector<Button>

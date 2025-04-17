@@ -1,4 +1,4 @@
-#include <helpers.hpp>
+#include "headers/helpers.hpp"
 
 sf::Texture helpers::loadTextureFromFile(const std::string& path)
 {
@@ -81,3 +81,13 @@ void helpers::prepareButtons(ButtonContainer& container)
         container.push_back(button);
     }
 }
+
+sf::Color helpers::modifyColorByFactor(sf::Color color, float factor)
+{
+    color.r *= factor;
+    color.g *= factor;
+    color.b *= factor;
+    return color;
+}
+
+

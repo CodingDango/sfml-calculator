@@ -26,7 +26,7 @@ find_package(SFML 2.5 REQUIRED COMPONENTS system window graphics) # Add audio ne
 # Add your executable target.
 # The first argument is the name of the executable file that will be built.
 # The following arguments are your source code files (.cpp, .h if needed for IDEs).
-add_executable(calculator ./src/main.cpp) # Add other .cpp files here if you have them
+add_executable(calculator ./src/main.cpp ./src/entities.cpp ./src/helpers.cpp) # Add other .cpp files here if you have them
 
 # --- Linking SFML ---
 # This links your executable (MySFMLApp) against the SFML libraries found earlier.

@@ -1,16 +1,20 @@
 #include "headers/entities.hpp"
 
-
 Button::Button(std::function<void()> c_callback)
 :
     Sprite(),
     click_callback(c_callback)
-{}
+{
+    normal_color = getColor();
+    hover_color = helpers::modifyColorByFactor(getColor(), 0.8);
+}
 
 void Button::handleHover(const sf::Vector2f& mouse_pos)
 {
     if (getGlobalBounds().contains(mouse_pos))
-        std::cout << "I am being hovered.\n";
+        setColor(hover_color);
+    else
+        setColor(normal_color);
 }
 
 void Button::handleClick(const sf::Vector2f& mouse_pos, const sf::Event& event)
@@ -19,7 +23,12 @@ void Button::handleClick(const sf::Vector2f& mouse_pos, const sf::Event& event)
         getGlobalBounds().contains(mouse_pos)
         && event.mouseButton.button == sf::Mouse::Button::Left
     )
+    {
         click_callback();
+    }
+
+    else
+        setColor(normal_color);
 }
 
 void ButtonContainer::drawButtons(sf::RenderWindow& window)
