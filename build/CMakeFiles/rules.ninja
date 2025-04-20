@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "D:\Coding Programs\MSYS\mingw64\bin\cmake.exe" --regenerate-during-build -S"D:\Coding Programs\Code\C Programs\C++\calculator" -B"D:\Coding Programs\Code\C Programs\C++\calculator\build"
+  command = "D:\Coding Programs\MSYS\mingw64\bin\cmake.exe" --regenerate-during-build -S"D:\Coding Programs\Code\C++\calculator" -B"D:\Coding Programs\Code\C++\calculator\build"
   description = Re-running CMake...
   generator = 1
 

@@ -9,6 +9,15 @@ Button::Button(std::function<void()> c_callback)
     hover_color = helpers::modifyColorByFactor(getColor(), 0.8);
 }
 
+Button::Button()
+:
+    Sprite(),
+    click_callback()
+{
+    normal_color = getColor();
+    hover_color = helpers::modifyColorByFactor(getColor(), 0.8);
+}
+
 void Button::handleHover(const sf::Vector2f& mouse_pos)
 {
     if (getGlobalBounds().contains(mouse_pos))
@@ -29,6 +38,11 @@ void Button::handleClick(const sf::Vector2f& mouse_pos, const sf::Event& event)
 
     else
         setColor(normal_color);
+}
+
+void Button::setClickCallback(std::function<void()> c_callback)
+{
+    click_callback = c_callback;
 }
 
 void ButtonContainer::drawButtons(sf::RenderWindow& window)

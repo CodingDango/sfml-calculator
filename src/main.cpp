@@ -12,8 +12,10 @@ int main()
         "Calculator"
     };
 
+    calc::CalculatorOperationContainer calc_data;
     ButtonContainer all_buttons {};
-    helpers::prepareButtons(all_buttons);
+    
+    helpers::prepareButtons(all_buttons, calc_data);
 
     while (window.isOpen())
     {
@@ -26,7 +28,12 @@ int main()
                 window.close();
 
             if (event.type == sf::Event::MouseButtonPressed) 
+            {
                 all_buttons.checkForClick(mouse_pos, event);
+                std::cout << calc_data.input << '\n';
+                std::cout << "First number: " << calc_data.first_num << '\n';
+                std::cout << "Operator: " << calc_data.operation << '\n';
+            }
         }  
          
         // Update
