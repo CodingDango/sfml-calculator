@@ -18,8 +18,9 @@ int main()
     helpers::prepareButtons(all_buttons, calc_data);
 
     while (window.isOpen())
-    {asdasda
-        sdad    dqdqd
+    {
+        sf::Event event;
+        sf::Vector2f mouse_pos (sf::Mouse::getPosition(window));
 
         while (window.pollEvent(event)) 
         {
