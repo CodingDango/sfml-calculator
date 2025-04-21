@@ -1,5 +1,9 @@
 #include "headers/entities.hpp"
 
+//===============================================================
+// class Button Public Methods
+//===============================================================
+
 Button::Button(std::function<void()> c_callback)
 :
     Sprite(),
@@ -44,6 +48,11 @@ void Button::setClickCallback(std::function<void()> c_callback)
 {
     click_callback = c_callback;
 }
+
+
+//===============================================================
+// struct ButtonContainer Public Methods
+//===============================================================
 
 void ButtonContainer::drawButtons(sf::RenderWindow& window)
 {

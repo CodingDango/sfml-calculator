@@ -38,6 +38,7 @@ void calc::CalculatorOperationContainer::reset()
     first_num = double();
     operation = char();
     is_first_num_inputted = false;
+    is_operation_inputted = false;
 }
 
 void calc::CalculatorOperationContainer::backspace()
@@ -53,13 +54,13 @@ void calc::CalculatorOperationContainer::clear()
 
 void calc::CalculatorOperationContainer::equal()
 {
-    if (!is_first_num_inputted 
-        && input.size() == 0)
+    if (!is_operation_inputted 
+        || (!is_first_num_inputted
+        && input.size() == 0))
         return;
     
     std::stringstream ss {input};   // ss contains the second number
     applyResult(ss);                       
-    input.clear();
 }
 
 void calc::CalculatorOperationContainer::add()
@@ -101,20 +102,26 @@ double calc::CalculatorOperationContainer::evaluate(
     case '*':
         return a * b;
     case '/':
+        // Handle division by 0
+        if (b == 0) {
+            return 0;
+        }
         return a / b;
 
     default:
-        return -69;
+        return a; // return the same unmodified number. b is 0 if operation hasnt been selected
     }
 }
 
 void calc::CalculatorOperationContainer::doOperatorOperation(char operation)
 {   
+    this->operation = operation;
+    is_operation_inputted = true;
+
     if (input.size() == 0)
         return;
 
     std::stringstream ss {input};
-    this->operation = operation;
 
     if (!is_first_num_inputted)
     {
@@ -123,6 +130,7 @@ void calc::CalculatorOperationContainer::doOperatorOperation(char operation)
         input.clear();
     } else  
         applyResult(ss);
+    this->operation = operation;
 }
 
 void calc::CalculatorOperationContainer::applyResult(std::stringstream& ss)
@@ -146,7 +154,6 @@ void core::prepareButtons(
     calc::CalculatorOperationContainer& calc_data
 )
 {
-    
     const sf::Vector2f STARTING_POINT = {17.0f, 266.0f};
     const int MARGIN_PX = 20;
     const int BUTTONS_PER_ROW = 4;

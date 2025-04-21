@@ -4,7 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-// Forward declarations
+// Forward declarations from helpers.hpp
 namespace helpers
 {
     sf::Color modifyColorByFactor(sf::Color color, float factor);

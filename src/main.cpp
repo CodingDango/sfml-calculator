@@ -12,10 +12,40 @@ int main()
         "Calculator"
     };
 
-    calc::CalculatorOperationContainer calc_data;
+    calc::CalculatorOperationContainer calc_data {};
     ButtonContainer all_buttons {};
 
     core::prepareButtons(all_buttons, calc_data);
+
+    // Load in font for the text
+    sf::Font font {};
+    if (!font.loadFromFile("../assets/fonts/YuGothM.ttc"))
+    {
+        std::cerr << "Font coulnd't be loaded\n";
+        return -1;
+    }
+
+    // Creating the first number textbox
+    sf::Text last_num_text {
+        "",
+        font,
+        20
+    };
+
+    sf::Text current_num_text {
+        "",
+        font,
+        40
+    };
+    
+    sf::Text operation_text {
+        "",
+        font,
+        20
+    };
+
+    last_num_text.setPosition(0, 30);
+    operation_text.setPosition(0, 60);
 
     while (window.isOpen())
     {
@@ -30,9 +60,10 @@ int main()
             if (event.type == sf::Event::MouseButtonPressed) 
             {
                 all_buttons.checkForClick(mouse_pos, event);
-                std::cout << calc_data.input << '\n';
-                std::cout << "First number: " << calc_data.first_num << '\n';
-                std::cout << "Operator: " << calc_data.operation << '\n';
+
+                current_num_text.setString(calc_data.input);
+                last_num_text.setString(std::to_string(calc_data.first_num));
+                operation_text.setString(calc_data.operation);
             }
         }  
          
@@ -42,6 +73,9 @@ int main()
         // Draw
         window.clear(background_color);
         all_buttons.drawButtons(window);
+        window.draw(current_num_text);
+        window.draw(last_num_text);
+        window.draw(operation_text);
         window.display();
     }
 }

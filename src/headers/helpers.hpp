@@ -85,6 +85,7 @@ namespace calc
         double first_num {};
         char operation {};
         bool is_first_num_inputted = false;
+        bool is_operation_inputted = false;
 
         void add_digit(char digit);
         void reset();
