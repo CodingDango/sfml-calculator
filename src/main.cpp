@@ -19,6 +19,21 @@ int main()
 
     while (window.isOpen())
     {
+        asdwdwdwd
+        w
+        dwd
+        wd
+        w
+        d
+        wd
+        w
+        d
+        wd
+        w
+        d
+        wcswcsdw
+
+        wdwdwd
         sf::Event event;
         sf::Vector2f mouse_pos (sf::Mouse::getPosition(window));
 
