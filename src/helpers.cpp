@@ -36,7 +36,7 @@ void calc::CalculatorOperationContainer::reset()
 {   
     input.clear();
     first_num = double();
-    operation = char();
+    operation = '~';
     is_first_num_inputted = false;
     is_operation_inputted = false;
 }
@@ -45,6 +45,11 @@ void calc::CalculatorOperationContainer::backspace()
 {
     if (input.size() != 0)
         input.pop_back();
+    else 
+    {
+        is_operation_inputted = false;
+        operation = '~';
+    }
 }
 
 void calc::CalculatorOperationContainer::clear()

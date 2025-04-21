@@ -26,26 +26,21 @@ int main()
     }
 
     // Creating the first number textbox
-    sf::Text last_num_text {
-        "",
-        font,
-        20
-    };
-
-    sf::Text current_num_text {
-        "",
-        font,
-        40
-    };
+    sf::Text current_num_text {"0", font, 60};
+    current_num_text.setStyle(sf::Text::Bold);
     
-    sf::Text operation_text {
-        "",
-        font,
-        20
-    };
-
-    last_num_text.setPosition(0, 30);
-    operation_text.setPosition(0, 60);
+    sf::Text last_num_text {"0", font, 50};
+    last_num_text.setStyle(sf::Text::Bold);
+    last_num_text.setFillColor(sf::Color(148, 148, 148, 100));
+        
+        
+    sf::Text operation_text {"~", font, 60};
+    operation_text.setStyle(sf::Text::Bold);
+    operation_text.setFillColor(sf::Color(148, 148, 148, 100));
+        
+    current_num_text.setPosition(30, 145);
+    last_num_text.setPosition(30, 26);
+    operation_text.setPosition(570, 27);
 
     while (window.isOpen())
     {
