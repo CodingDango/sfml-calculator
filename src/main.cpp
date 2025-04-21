@@ -14,8 +14,8 @@ int main()
 
     calc::CalculatorOperationContainer calc_data;
     ButtonContainer all_buttons {};
-    
-    helpers::prepareButtons(all_buttons, calc_data);
+
+    core::prepareButtons(all_buttons, calc_data);
 
     while (window.isOpen())
     {
