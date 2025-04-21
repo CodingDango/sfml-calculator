@@ -221,7 +221,3 @@ void core::addButtonFunction(
         btn.setClickCallback([&calc_data, digit](){ calc_data.add_digit(digit); });
     }
 }
-
-
-
-
