@@ -155,6 +155,11 @@ void calc::CalculatorOperationContainer::applyResult(std::stringstream& ss)
 //===============================================================
 
 void core::prepareButtons(
+
+    
+
+
+
     ButtonContainer& container, 
     calc::CalculatorOperationContainer& calc_data
 )
