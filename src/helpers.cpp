@@ -109,12 +109,12 @@ double calc::CalculatorOperationContainer::evaluate(
     case '/':
         // Handle division by 0
         if (b == 0) {
-            return 0;
+            return a;   // return number unmodified
         }
         return a / b;
 
     default:
-        return a; // return the same unmodified number. b is 0 if operation hasnt been selected
+        return a; // return the same unmodified number. a is 0 if operation hasnt been selected
     }
 }
 
