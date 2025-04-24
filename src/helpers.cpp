@@ -155,31 +155,29 @@ void calc::CalculatorOperationContainer::applyResult(std::stringstream& ss)
 //===============================================================
 
 void core::prepareButtons(
-
-    
-
-
-
     ButtonContainer& container, 
     calc::CalculatorOperationContainer& calc_data
 )
 {
-    const sf::Vector2f STARTING_POINT = {17.0f, 266.0f};
-    const int MARGIN_PX = 20;
+    const sf::Vector2f STARTING_POINT = {19.60f, 200.0f};
+    const int MARGIN_X_PX = 27;
+    const int MARGIN_Y_PX = 20;
     const int BUTTONS_PER_ROW = 4;
 
     float X {STARTING_POINT.x};
     float Y {STARTING_POINT.y};
     int BUTTON_COUNTER {};
 
-    for (int i = 0; i < calc::button_texture_paths.size(); i++)
-    {
+    for (int i = 0; i < assets::button_initializers.size(); i++)
+    {   
+        const auto& btn_initializer = assets::button_initializers[i];
+
         // Clear button
         if (i == 0)
         {
             BUTTON_COUNTER += 2;
             Button clear_button { [&calc_data](){ calc_data.clear(); } };
-            clear_button.setTexture(calc::button_texture_paths[i]);
+            clear_button.setTexture(btn_initializer.texture);
             clear_button.setPosition(STARTING_POINT);
             container.push_back(clear_button);
             continue;
@@ -190,18 +188,18 @@ void core::prepareButtons(
         if ((BUTTON_COUNTER - 1)% BUTTONS_PER_ROW == 0)
         {   
             // Get height of last element and add the gap or magin
-            Y += (container.back().getTexture()->getSize().y) + MARGIN_PX;    
+            Y += (container.back().getTexture()->getSize().y) + MARGIN_Y_PX;    
             X = STARTING_POINT.x;
         } 
         else 
         {
-            X += (container.back().getTexture()->getSize().x) + MARGIN_PX;
+            X += (container.back().getTexture()->getSize().x) + MARGIN_X_PX;
         }
 
         // Add button functionality
         Button button;
-        addButtonFunction(button, i, calc_data);
-        button.setTexture(calc::button_texture_paths[i]);
+        addButtonFunction(button, btn_initializer, calc_data);
+        button.setTexture(btn_initializer.texture);
         button.setPosition({X, Y});
         container.push_back(button);
     }
@@ -209,32 +207,34 @@ void core::prepareButtons(
 
 void core::addButtonFunction(
     Button& btn, 
-    int value_index,
+    const assets::ButtonInitializerData& initializer,
     calc::CalculatorOperationContainer& calc_data
 )
-{
-    if (calc::button_values[value_index] == "del") 
+{   
+    const std::string btn_value = initializer.value;
+
+    if (btn_value == "del") 
         btn.setClickCallback([&calc_data](){ calc_data.backspace(); });
 
-    else if (calc::button_values[value_index] == "=")
+    else if (btn_value == "=")
         btn.setClickCallback([&calc_data](){ calc_data.equal(); });
 
-    else if (calc::button_values[value_index] == "+")
+    else if (btn_value == "+")
         btn.setClickCallback([&calc_data](){ calc_data.add(); });
     
-    else if (calc::button_values[value_index] == "-")
+    else if (btn_value == "-")
         btn.setClickCallback([&calc_data](){ calc_data.subtract(); });
 
-    else if (calc::button_values[value_index] == "*")
+    else if (btn_value == "*")
         btn.setClickCallback([&calc_data](){ calc_data.multiply(); });
 
-    else if (calc::button_values[value_index] == "/")
+    else if (btn_value == "/")
         btn.setClickCallback([&calc_data](){ calc_data.divide(); });
 
     else 
     {   
         // This is guaranteed to be a digit character. can be period.
-        char digit = std::string(calc::button_values[value_index])[0];
+        char digit = btn_value[0];
         btn.setClickCallback([&calc_data, digit](){ calc_data.add_digit(digit); });
     }
 }

@@ -40,6 +40,56 @@ namespace calc
     }; 
 }
 
+namespace assets 
+{   
+    struct ButtonInitializerData
+    {   
+        const std::string value;
+        const sf::Texture texture;
+
+        ButtonInitializerData(
+            const std::string& val,
+            const sf::Texture& text
+        )
+        :   value(val), texture(text) 
+        {}
+    }; 
+
+    using namespace helpers;    // Shorten the code
+
+    static const std::vector<ButtonInitializerData> button_initializers = {
+
+            // First row
+            ButtonInitializerData("clear", loadTextureFromFile("../assets/op-btns/oper-clear.png")),
+            ButtonInitializerData("del", loadTextureFromFile("../assets/op-btns/oper-del.png")),
+            ButtonInitializerData("/", loadTextureFromFile("../assets/op-btns/oper-divide.png")),
+            
+            // Second row
+            ButtonInitializerData("7", loadTextureFromFile("../assets/num-btns/num-7.png")),
+            ButtonInitializerData("8", loadTextureFromFile("../assets/num-btns/num-8.png")),
+            ButtonInitializerData("9", loadTextureFromFile("../assets/num-btns/num-9.png")),
+            ButtonInitializerData("*", loadTextureFromFile("../assets/op-btns/oper-multiply.png")),
+    
+            // Third row
+            ButtonInitializerData("4", loadTextureFromFile("../assets/num-btns/num-4.png")),
+            ButtonInitializerData("5", loadTextureFromFile("../assets/num-btns/num-5.png")),
+            ButtonInitializerData("6", loadTextureFromFile("../assets/num-btns/num-6.png")),
+            ButtonInitializerData("-", loadTextureFromFile("../assets/op-btns/oper-subtract.png")),
+    
+            // Fourth row
+            ButtonInitializerData("1", loadTextureFromFile("../assets/num-btns/num-1.png")),
+            ButtonInitializerData("2", loadTextureFromFile("../assets/num-btns/num-2.png")),
+            ButtonInitializerData("3", loadTextureFromFile("../assets/num-btns/num-3.png")),
+            ButtonInitializerData("+", loadTextureFromFile("../assets/op-btns/oper-add.png")),
+
+            // Fifth row
+            ButtonInitializerData("empty", loadTextureFromFile("../assets/num-btns/num-empty.png")),
+            ButtonInitializerData("0", loadTextureFromFile("../assets/num-btns/num-0.png")),
+            ButtonInitializerData(".", loadTextureFromFile("../assets/num-btns/char-dot.png")),
+            ButtonInitializerData("=", loadTextureFromFile("../assets/op-btns/oper-equals.png")),
+    }; 
+}
+
 namespace core
 {       
     void prepareButtons(
@@ -49,60 +99,7 @@ namespace core
 
     void addButtonFunction(
         Button& btn, 
-        int value_index,
+        const assets::ButtonInitializerData& initializer,
         calc::CalculatorOperationContainer& calc_data
     );
-}
-
-namespace assets 
-{   
-    struct ButtonInitializerData
-    {   
-        const std::string value;
-        const std::string asset_path;
-
-        ButtonInitializerData(
-            const std::string& val,
-            const std::string& ass_path
-        )
-        :   value(val), asset_path(ass_path) 
-        {}
-
-        ButtonInitializerData()
-        :   value(), asset_path()
-        {}
-    }; 
-
-    // Paths to the assets of these buttons
-    static const std::vector<ButtonInitializerData> button_initializers = {
-            // First row
-            ButtonInitializerData("clear", "../assets/op-btns/oper-clear.png"),
-            ButtonInitializerData("del", "../assets/op-btns/oper-del.png"),
-            ButtonInitializerData("/", "../assets/op-btns/oper-divide.png"),
-            
-            // Second row
-            ButtonInitializerData("7", "../assets/num-btns/num-7.png"),
-            ButtonInitializerData("8", "../assets/num-btns/num-8.png"),
-            ButtonInitializerData("9", "../assets/num-btns/num-9.png"),
-            ButtonInitializerData("*", "../assets/op-btns/oper-multiply.png"),
-    
-            // Third row
-            ButtonInitializerData("4", "../assets/num-btns/num-4.png"),
-            ButtonInitializerData("5", "../assets/num-btns/num-5.png"),
-            ButtonInitializerData("6", "../assets/num-btns/num-6.png"),
-            ButtonInitializerData("-", "../assets/op-btns/oper-subtract.png"),
-    
-            // Fourth row
-            ButtonInitializerData("1", "../assets/num-btns/num-1.png"),
-            ButtonInitializerData("2", "../assets/num-btns/num-2.png"),
-            ButtonInitializerData("3", "../assets/num-btns/num-3.png"),
-            ButtonInitializerData("+", "../assets/op-btns/oper-add.png"),
-
-            // Fifth row
-            ButtonInitializerData("empty", "../assets/num-btns/num-empty.png"),
-            ButtonInitializerData("0", "../assets/num-btns/num-0.png"),
-            ButtonInitializerData(".", "../assets/num-btns/char-dot.png"),
-            ButtonInitializerData("=", "../assets/op-btns/oper-equals.png"),
-        
-    }; 
 }

@@ -1,8 +1,8 @@
 #include "headers/entities.hpp"   
 #include "headers/helpers.hpp"
 
-const int WINDOW_WIDTH_PX = 655;
-const int WINDOW_HEIGHT_PX = 1062;
+const int WINDOW_WIDTH_PX = 600;
+const int WINDOW_HEIGHT_PX = 800;
 const sf::Color background_color {17, 17, 17};
 
 int main()
@@ -26,19 +26,19 @@ int main()
     }
 
     // Creating the first number textbox
-    sf::Text current_num_text {"0", font, 60};
+    sf::Text current_num_text {"0", font, 50};
     current_num_text.setStyle(sf::Text::Bold);
-    current_num_text.setPosition(30, 145);
+    current_num_text.setPosition(30, 125);
 
-    sf::Text last_num_text {"0", font, 50};
+    sf::Text last_num_text {"0", font, 40};
     last_num_text.setStyle(sf::Text::Bold);
     last_num_text.setFillColor(sf::Color(148, 148, 148, 100));
     last_num_text.setPosition(30, 26);
         
-    sf::Text operation_text {"~", font, 60};
+    sf::Text operation_text {"~", font, 45};
     operation_text.setStyle(sf::Text::Bold);
     operation_text.setFillColor(sf::Color(148, 148, 148, 100));
-    operation_text.setPosition(570, 27);
+    operation_text.setPosition(535, 26);
     
     while (window.isOpen())
     {
