@@ -41,7 +41,9 @@ namespace calc
 }
 
 namespace assets 
-{   
+{       
+    const auto& load = helpers::loadTextureFromFile; // Shorten the code for loading.
+
     struct ButtonInitializerData
     {   
         const std::string value;
@@ -55,39 +57,7 @@ namespace assets
         {}
     }; 
 
-    using namespace helpers;    // Shorten the code
-
-    static const std::vector<ButtonInitializerData> button_initializers = {
-
-            // First row
-            ButtonInitializerData("clear", loadTextureFromFile("../assets/op-btns/oper-clear.png")),
-            ButtonInitializerData("del", loadTextureFromFile("../assets/op-btns/oper-del.png")),
-            ButtonInitializerData("/", loadTextureFromFile("../assets/op-btns/oper-divide.png")),
-            
-            // Second row
-            ButtonInitializerData("7", loadTextureFromFile("../assets/num-btns/num-7.png")),
-            ButtonInitializerData("8", loadTextureFromFile("../assets/num-btns/num-8.png")),
-            ButtonInitializerData("9", loadTextureFromFile("../assets/num-btns/num-9.png")),
-            ButtonInitializerData("*", loadTextureFromFile("../assets/op-btns/oper-multiply.png")),
-    
-            // Third row
-            ButtonInitializerData("4", loadTextureFromFile("../assets/num-btns/num-4.png")),
-            ButtonInitializerData("5", loadTextureFromFile("../assets/num-btns/num-5.png")),
-            ButtonInitializerData("6", loadTextureFromFile("../assets/num-btns/num-6.png")),
-            ButtonInitializerData("-", loadTextureFromFile("../assets/op-btns/oper-subtract.png")),
-    
-            // Fourth row
-            ButtonInitializerData("1", loadTextureFromFile("../assets/num-btns/num-1.png")),
-            ButtonInitializerData("2", loadTextureFromFile("../assets/num-btns/num-2.png")),
-            ButtonInitializerData("3", loadTextureFromFile("../assets/num-btns/num-3.png")),
-            ButtonInitializerData("+", loadTextureFromFile("../assets/op-btns/oper-add.png")),
-
-            // Fifth row
-            ButtonInitializerData("empty", loadTextureFromFile("../assets/num-btns/num-empty.png")),
-            ButtonInitializerData("0", loadTextureFromFile("../assets/num-btns/num-0.png")),
-            ButtonInitializerData(".", loadTextureFromFile("../assets/num-btns/char-dot.png")),
-            ButtonInitializerData("=", loadTextureFromFile("../assets/op-btns/oper-equals.png")),
-    }; 
+    extern const std::vector<ButtonInitializerData> button_initializers;
 }
 
 namespace core

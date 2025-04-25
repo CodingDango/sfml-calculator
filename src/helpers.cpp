@@ -151,6 +151,43 @@ void calc::CalculatorOperationContainer::applyResult(std::stringstream& ss)
 
 
 //===============================================================
+// namespace assets Definitions
+//===============================================================
+
+const std::vector<assets::ButtonInitializerData> assets::button_initializers = {
+
+    // First row
+    ButtonInitializerData("clear", assets::load("../assets/op-btns/oper-clear.png")),
+    ButtonInitializerData("del", assets::load("../assets/op-btns/oper-del.png")),
+    ButtonInitializerData("/", assets::load("../assets/op-btns/oper-divide.png")),
+    
+    // Second row
+    ButtonInitializerData("7", assets::load("../assets/num-btns/num-7.png")),
+    ButtonInitializerData("8", assets::load("../assets/num-btns/num-8.png")),
+    ButtonInitializerData("9", assets::load("../assets/num-btns/num-9.png")),
+    ButtonInitializerData("*", assets::load("../assets/op-btns/oper-multiply.png")),
+
+    // Third row
+    ButtonInitializerData("4", assets::load("../assets/num-btns/num-4.png")),
+    ButtonInitializerData("5", assets::load("../assets/num-btns/num-5.png")),
+    ButtonInitializerData("6", assets::load("../assets/num-btns/num-6.png")),
+    ButtonInitializerData("-", assets::load("../assets/op-btns/oper-subtract.png")),
+
+    // Fourth row
+    ButtonInitializerData("1", assets::load("../assets/num-btns/num-1.png")),
+    ButtonInitializerData("2", assets::load("../assets/num-btns/num-2.png")),
+    ButtonInitializerData("3", assets::load("../assets/num-btns/num-3.png")),
+    ButtonInitializerData("+", assets::load("../assets/op-btns/oper-add.png")),
+
+    // Fifth row
+    ButtonInitializerData("empty", assets::load("../assets/num-btns/num-empty.png")),
+    ButtonInitializerData("0", assets::load("../assets/num-btns/num-0.png")),
+    ButtonInitializerData(".", assets::load("../assets/num-btns/char-dot.png")),
+    ButtonInitializerData("=", assets::load("../assets/op-btns/oper-equals.png")),
+}; 
+
+
+//===============================================================
 // namespace core Function Definitions
 //===============================================================
 
