@@ -10,7 +10,7 @@ Button::Button(std::function<void()> c_callback)
     click_callback(c_callback)
 {
     normal_color = getColor();
-    hover_color = helpers::modifyColorByFactor(getColor(), 0.8);
+    hover_color = utils::modifyColorByFactor(getColor(), 0.8);
 }
 
 Button::Button()
@@ -19,7 +19,7 @@ Button::Button()
     click_callback()
 {
     normal_color = getColor();
-    hover_color = helpers::modifyColorByFactor(getColor(), 0.8);
+    hover_color = utils::modifyColorByFactor(getColor(), 0.8);
 }
 
 void Button::handleHover(const sf::Vector2f& mouse_pos)

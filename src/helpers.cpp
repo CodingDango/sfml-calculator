@@ -1,17 +1,17 @@
 #include "headers/helpers.hpp"
 
 //===============================================================
-// namespace helpers function definitions
+// namespace utils function definitions
 //===============================================================
 
-sf::Texture helpers::loadTextureFromFile(const std::string& path)
+sf::Texture utils::loadTexture(const std::string& path)
 {
     sf::Texture texture;
     texture.loadFromFile(path);
     return texture;
 }
 
-sf::Color helpers::modifyColorByFactor(sf::Color color, float factor)
+sf::Color utils::modifyColorByFactor(sf::Color color, float factor)
 {
     color.r *= factor;
     color.g *= factor;
@@ -19,7 +19,7 @@ sf::Color helpers::modifyColorByFactor(sf::Color color, float factor)
     return color;
 }
 
-sf::Font helpers::loadFontFromFile(const std::string& path)
+sf::Font utils::loadFont(const std::string& path)
 {
     sf::Font font {};
     if (!font.loadFromFile(path))
@@ -43,9 +43,8 @@ void calc::CalculatorOperationContainer::add_digit(char digit)
 void calc::CalculatorOperationContainer::reset()
 {   
     input.clear();
-    first_num = double();
+    result = 0;
     operation = '~';
-    is_first_num_inputted = false;
     is_operation_inputted = false;
 }
 
@@ -66,14 +65,16 @@ void calc::CalculatorOperationContainer::clear()
 }
 
 void calc::CalculatorOperationContainer::equal()
-{
-    if (!is_operation_inputted 
-        || (!is_first_num_inputted
-        && input.size() == 0))
+{   
+    if (!is_operation_inputted || input.size() == 0) 
         return;
-    
+
     std::stringstream ss {input};   // ss contains the second number
-    applyResult(ss);                       
+    applyResult(ss);  
+    
+    // After using equals, reset the operations.
+    is_operation_inputted = false;
+    operation = false;                   
 }
 
 void calc::CalculatorOperationContainer::add()
@@ -122,7 +123,7 @@ double calc::CalculatorOperationContainer::evaluate(
         return a / b;
 
     default:
-        return a; // return the same unmodified number. a is 0 if operation hasnt been selected
+        return 0;
     }
 }
 
@@ -135,26 +136,15 @@ void calc::CalculatorOperationContainer::doOperatorOperation(char operation)
         return;
 
     std::stringstream ss {input};
-
-    if (!is_first_num_inputted)
-    {
-        ss >> first_num;
-        is_first_num_inputted = true;
-        input.clear();
-    } else  
-        applyResult(ss);
-    this->operation = operation;
+    applyResult(ss);
 }
 
 void calc::CalculatorOperationContainer::applyResult(std::stringstream& ss)
 {   
-    double second_num {};
-    ss >> second_num;
-
-    double result = evaluate(first_num, second_num, operation);   
-    reset();
-    first_num = result;
-    is_first_num_inputted = true;
+    double input_num {};
+    ss >> input_num;
+    result = evaluate(result, input_num, operation);     
+    input.clear();
 }
 
 
@@ -165,38 +155,37 @@ void calc::CalculatorOperationContainer::applyResult(std::stringstream& ss)
 const std::vector<assets::ButtonInitializerData> assets::button_initializers = {
 
     // First row
-    ButtonInitializerData("clear", assets::loadTexture("../assets/op-btns/oper-clear.png")),
-    ButtonInitializerData("del", assets::loadTexture("../assets/op-btns/oper-del.png")),
-    ButtonInitializerData("/", assets::loadTexture("../assets/op-btns/oper-divide.png")),
+    ButtonInitializerData("clear", utils::loadTexture("../assets/op-btns/oper-clear.png")),
+    ButtonInitializerData("del", utils::loadTexture("../assets/op-btns/oper-del.png")),
+    ButtonInitializerData("/", utils::loadTexture("../assets/op-btns/oper-divide.png")),
         
     // Second row
-    ButtonInitializerData("7", assets::loadTexture("../assets/num-btns/num-7.png")),
-    ButtonInitializerData("8", assets::loadTexture("../assets/num-btns/num-8.png")),
-    ButtonInitializerData("9", assets::loadTexture("../assets/num-btns/num-9.png")), 
-    ButtonInitializerData("*", assets::loadTexture("../assets/op-btns/oper-multiply.png")),
+    ButtonInitializerData("7", utils::loadTexture("../assets/num-btns/num-7.png")),
+    ButtonInitializerData("8", utils::loadTexture("../assets/num-btns/num-8.png")),
+    ButtonInitializerData("9", utils::loadTexture("../assets/num-btns/num-9.png")), 
+    ButtonInitializerData("*", utils::loadTexture("../assets/op-btns/oper-multiply.png")),
 
     // Third row
-    ButtonInitializerData("4", assets::loadTexture("../assets/num-btns/num-4.png")),
-    ButtonInitializerData("5", assets::loadTexture("../assets/num-btns/num-5.png")),
-    ButtonInitializerData("6", assets::loadTexture("../assets/num-btns/num-6.png")),
-    ButtonInitializerData("-", assets::loadTexture("../assets/op-btns/oper-subtract.png")),
+    ButtonInitializerData("4", utils::loadTexture("../assets/num-btns/num-4.png")),
+    ButtonInitializerData("5", utils::loadTexture("../assets/num-btns/num-5.png")),
+    ButtonInitializerData("6", utils::loadTexture("../assets/num-btns/num-6.png")),
+    ButtonInitializerData("-", utils::loadTexture("../assets/op-btns/oper-subtract.png")),
 
     // Fourth row
-    ButtonInitializerData("1", assets::loadTexture("../assets/num-btns/num-1.png")),
-    ButtonInitializerData("2", assets::loadTexture("../assets/num-btns/num-2.png")),
-    ButtonInitializerData("3", assets::loadTexture("../assets/num-btns/num-3.png")),
-    ButtonInitializerData("+", assets::loadTexture("../assets/op-btns/oper-add.png")),
+    ButtonInitializerData("1", utils::loadTexture("../assets/num-btns/num-1.png")),
+    ButtonInitializerData("2", utils::loadTexture("../assets/num-btns/num-2.png")),
+    ButtonInitializerData("3", utils::loadTexture("../assets/num-btns/num-3.png")),
+    ButtonInitializerData("+", utils::loadTexture("../assets/op-btns/oper-add.png")),
 
     // Fifth row
-    ButtonInitializerData("empty", assets::loadTexture("../assets/num-btns/num-empty.png")),
-    ButtonInitializerData("0", assets::loadTexture("../assets/num-btns/num-0.png")),
-    ButtonInitializerData(".", assets::loadTexture("../assets/num-btns/char-dot.png")),
-    ButtonInitializerData("=", assets::loadTexture("../assets/op-btns/oper-equals.png")),
-        
+    ButtonInitializerData("empty", utils::loadTexture("../assets/num-btns/num-empty.png")),
+    ButtonInitializerData("0", utils::loadTexture("../assets/num-btns/num-0.png")),
+    ButtonInitializerData(".", utils::loadTexture("../assets/num-btns/char-dot.png")),
+    ButtonInitializerData("=", utils::loadTexture("../assets/op-btns/oper-equals.png")),
 }; 
 
 const sf::Font assets::my_font { 
-    assets::loadFont("../assets/fonts/YuGothM.ttc")
+    utils::loadFont("../assets/fonts/YuGothM.ttc")
 };
 
 

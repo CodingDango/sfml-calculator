@@ -5,7 +5,7 @@
 #include <iostream>
 
 // Forward declarations from helpers.hpp
-namespace helpers
+namespace utils
 {
     sf::Color modifyColorByFactor(sf::Color color, float factor);
 }

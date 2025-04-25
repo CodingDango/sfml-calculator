@@ -5,13 +5,13 @@
 #include <sstream>
 #include "entities.hpp"
 
-namespace helpers
+namespace utils
 {
-    sf::Texture loadTextureFromFile(const std::string& path);
+    sf::Texture loadTexture(const std::string& path);
 
     sf::Color modifyColorByFactor(sf::Color color, float factor);
 
-    sf::Font loadFontFromFile(const std::string& path);
+    sf::Font loadFont(const std::string& path);
 }
 
 namespace calc 
@@ -20,9 +20,8 @@ namespace calc
     {   
     public:
         std::string input {};
-        double first_num {};
+        double result {};
         char operation {};
-        bool is_first_num_inputted = false;
         bool is_operation_inputted = false;
 
         void add_digit(char digit);
@@ -44,10 +43,6 @@ namespace calc
 
 namespace assets 
 {       
-    // Shorten the character per line
-    const auto& loadTexture = helpers::loadTextureFromFile;
-    const auto& loadFont = helpers::loadFontFromFile;
-
     struct ButtonInitializerData
     {   
         const std::string value;

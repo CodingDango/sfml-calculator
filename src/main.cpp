@@ -26,14 +26,14 @@ int main()
     }
 
     // Creating the first number textbox
-    sf::Text current_num_text {"0", font, 50};
-    current_num_text.setStyle(sf::Text::Bold);
-    current_num_text.setPosition(30, 125);
+    sf::Text input_num_text {"0", font, 50};
+    input_num_text.setStyle(sf::Text::Bold);
+    input_num_text.setPosition(30, 125);
 
-    sf::Text last_num_text {"0", font, 40};
-    last_num_text.setStyle(sf::Text::Bold);
-    last_num_text.setFillColor(sf::Color(148, 148, 148, 100));
-    last_num_text.setPosition(30, 26);
+    sf::Text result_text {"0", font, 40};
+    result_text.setStyle(sf::Text::Bold);
+    result_text.setFillColor(sf::Color(148, 148, 148, 100));
+    result_text.setPosition(30, 26);
         
     sf::Text operation_text {"~", font, 45};
     operation_text.setStyle(sf::Text::Bold);
@@ -54,8 +54,8 @@ int main()
             {
                 all_buttons.checkForClick(mouse_pos, event);
 
-                current_num_text.setString(calc_data.input);
-                last_num_text.setString(std::to_string(calc_data.first_num));
+                input_num_text.setString(calc_data.input);
+                result_text.setString(std::to_string(calc_data.result));
                 operation_text.setString(calc_data.operation);
             }
         }  
@@ -66,8 +66,8 @@ int main()
         // Draw
         window.clear(background_color);
         all_buttons.drawButtons(window);
-        window.draw(current_num_text);
-        window.draw(last_num_text);
+        window.draw(input_num_text);
+        window.draw(result_text);
         window.draw(operation_text);
         window.display();
     }
