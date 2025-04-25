@@ -10,6 +10,8 @@ namespace helpers
     sf::Texture loadTextureFromFile(const std::string& path);
 
     sf::Color modifyColorByFactor(sf::Color color, float factor);
+
+    sf::Font loadFontFromFile(const std::string& path);
 }
 
 namespace calc 
@@ -42,7 +44,9 @@ namespace calc
 
 namespace assets 
 {       
-    const auto& load = helpers::loadTextureFromFile; // Shorten the code for loading.
+    // Shorten the character per line
+    const auto& loadTexture = helpers::loadTextureFromFile;
+    const auto& loadFont = helpers::loadFontFromFile;
 
     struct ButtonInitializerData
     {   
@@ -58,6 +62,7 @@ namespace assets
     }; 
 
     extern const std::vector<ButtonInitializerData> button_initializers;
+    extern const sf::Font my_font;
 }
 
 namespace core

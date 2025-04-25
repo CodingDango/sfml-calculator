@@ -19,6 +19,14 @@ sf::Color helpers::modifyColorByFactor(sf::Color color, float factor)
     return color;
 }
 
+sf::Font helpers::loadFontFromFile(const std::string& path)
+{
+    sf::Font font {};
+    if (!font.loadFromFile(path))
+        std::cerr << "Font with path '" << path << "' could not be loaded.\n";
+    return font;
+} 
+
 
 //===============================================================
 // Class CalculatorOperationContainer Public Methods Definitions
@@ -157,34 +165,39 @@ void calc::CalculatorOperationContainer::applyResult(std::stringstream& ss)
 const std::vector<assets::ButtonInitializerData> assets::button_initializers = {
 
     // First row
-    ButtonInitializerData("clear", assets::load("../assets/op-btns/oper-clear.png")),
-    ButtonInitializerData("del", assets::load("../assets/op-btns/oper-del.png")),
-    ButtonInitializerData("/", assets::load("../assets/op-btns/oper-divide.png")),
-    
+    ButtonInitializerData("clear", assets::loadTexture("../assets/op-btns/oper-clear.png")),
+    ButtonInitializerData("del", assets::loadTexture("../assets/op-btns/oper-del.png")),
+    ButtonInitializerData("/", assets::loadTexture("../assets/op-btns/oper-divide.png")),
+        
     // Second row
-    ButtonInitializerData("7", assets::load("../assets/num-btns/num-7.png")),
-    ButtonInitializerData("8", assets::load("../assets/num-btns/num-8.png")),
-    ButtonInitializerData("9", assets::load("../assets/num-btns/num-9.png")),
-    ButtonInitializerData("*", assets::load("../assets/op-btns/oper-multiply.png")),
+    ButtonInitializerData("7", assets::loadTexture("../assets/num-btns/num-7.png")),
+    ButtonInitializerData("8", assets::loadTexture("../assets/num-btns/num-8.png")),
+    ButtonInitializerData("9", assets::loadTexture("../assets/num-btns/num-9.png")), 
+    ButtonInitializerData("*", assets::loadTexture("../assets/op-btns/oper-multiply.png")),
 
     // Third row
-    ButtonInitializerData("4", assets::load("../assets/num-btns/num-4.png")),
-    ButtonInitializerData("5", assets::load("../assets/num-btns/num-5.png")),
-    ButtonInitializerData("6", assets::load("../assets/num-btns/num-6.png")),
-    ButtonInitializerData("-", assets::load("../assets/op-btns/oper-subtract.png")),
+    ButtonInitializerData("4", assets::loadTexture("../assets/num-btns/num-4.png")),
+    ButtonInitializerData("5", assets::loadTexture("../assets/num-btns/num-5.png")),
+    ButtonInitializerData("6", assets::loadTexture("../assets/num-btns/num-6.png")),
+    ButtonInitializerData("-", assets::loadTexture("../assets/op-btns/oper-subtract.png")),
 
     // Fourth row
-    ButtonInitializerData("1", assets::load("../assets/num-btns/num-1.png")),
-    ButtonInitializerData("2", assets::load("../assets/num-btns/num-2.png")),
-    ButtonInitializerData("3", assets::load("../assets/num-btns/num-3.png")),
-    ButtonInitializerData("+", assets::load("../assets/op-btns/oper-add.png")),
+    ButtonInitializerData("1", assets::loadTexture("../assets/num-btns/num-1.png")),
+    ButtonInitializerData("2", assets::loadTexture("../assets/num-btns/num-2.png")),
+    ButtonInitializerData("3", assets::loadTexture("../assets/num-btns/num-3.png")),
+    ButtonInitializerData("+", assets::loadTexture("../assets/op-btns/oper-add.png")),
 
     // Fifth row
-    ButtonInitializerData("empty", assets::load("../assets/num-btns/num-empty.png")),
-    ButtonInitializerData("0", assets::load("../assets/num-btns/num-0.png")),
-    ButtonInitializerData(".", assets::load("../assets/num-btns/char-dot.png")),
-    ButtonInitializerData("=", assets::load("../assets/op-btns/oper-equals.png")),
+    ButtonInitializerData("empty", assets::loadTexture("../assets/num-btns/num-empty.png")),
+    ButtonInitializerData("0", assets::loadTexture("../assets/num-btns/num-0.png")),
+    ButtonInitializerData(".", assets::loadTexture("../assets/num-btns/char-dot.png")),
+    ButtonInitializerData("=", assets::loadTexture("../assets/op-btns/oper-equals.png")),
+        
 }; 
+
+const sf::Font assets::my_font { 
+    assets::loadFont("../assets/fonts/YuGothM.ttc")
+};
 
 
 //===============================================================
