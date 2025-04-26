@@ -11,7 +11,10 @@ namespace utils
     sf::Color modifyColorByFactor(sf::Color color, float factor);
 }
 
-// Declarations
+//===============================================================
+// Button related declarations
+//===============================================================
+
 class Button : public sf::Sprite
 {   
 public:
@@ -27,6 +30,18 @@ private:
     sf::Color hover_color;
     sf::Color normal_color;
 };
+
+struct ButtonContainer : public std::vector<Button>
+{   
+    void drawButtons(sf::RenderWindow& window);
+    void checkForClick(const sf::Vector2f& mouse_pos, const sf::Event& event);
+    void checkForHover(const sf::Vector2f& mouse_pos);
+};
+
+
+//===============================================================
+// DynamicText related content
+//===============================================================
 
 template <typename T>
 class DynamicText : public sf::Text 
@@ -57,10 +72,3 @@ public:
 private:
     T& value;
 }; 
-
-struct ButtonContainer : public std::vector<Button>
-{   
-    void drawButtons(sf::RenderWindow& window);
-    void checkForClick(const sf::Vector2f& mouse_pos, const sf::Event& event);
-    void checkForHover(const sf::Vector2f& mouse_pos);
-};

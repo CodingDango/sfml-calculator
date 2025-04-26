@@ -1,5 +1,6 @@
-#include "helpers.hpp"
+#include "core.hpp"
 #include "entities.hpp"
+#include "utils.hpp"
 #include <SFML/Graphics.hpp>
 
 const int WINDOW_WIDTH_PX = 600;
@@ -13,9 +14,9 @@ int main()
         "Calculator"
     };
 
+    // Core prep for buttons
     calc::CalculatorOperationContainer calc_data {};
     ButtonContainer all_buttons {};
-
     core::prepareButtons(all_buttons, calc_data);
     
     // Creating the first number textbox
