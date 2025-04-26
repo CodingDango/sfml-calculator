@@ -1,4 +1,6 @@
 #include "helpers.hpp"
+#include "entities.hpp"
+#include <SFML/Graphics.hpp>
 
 const int WINDOW_WIDTH_PX = 600;
 const int WINDOW_HEIGHT_PX = 800;
@@ -16,7 +18,6 @@ int main()
 
     core::prepareButtons(all_buttons, calc_data);
     
-
     // Creating the first number textbox
     DynamicText input_num_text {calc_data.input, assets::my_font, 50};
     input_num_text.setStyle(sf::Text::Bold);

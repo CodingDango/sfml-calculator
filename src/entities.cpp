@@ -1,4 +1,4 @@
-#include "headers/entities.hpp"
+#include "entities.hpp"
 
 //===============================================================
 // class Button Public Methods

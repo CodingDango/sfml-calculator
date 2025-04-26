@@ -12,7 +12,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-target_include_directories(./src/ PRIVATE includes)
+
 
 # --- Finding SFML ---
 # This is the core part for SFML.
@@ -29,7 +29,7 @@ find_package(SFML 2.5 REQUIRED COMPONENTS system window graphics) # Add audio ne
 # The first argument is the name of the executable file that will be built.
 # The following arguments are your source code files (.cpp, .h if needed for IDEs).
 add_executable(calculator ./src/main.cpp ./src/entities.cpp ./src/helpers.cpp) # Add other .cpp files here if you have them
-
+target_include_directories(calculator PRIVATE includes)
 # --- Linking SFML ---
 # This links your executable (MySFMLApp) against the SFML libraries found earlier.
 # Modern SFML (found via find_package) provides "imported targets" like SFML::system,
