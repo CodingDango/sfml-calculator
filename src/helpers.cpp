@@ -118,7 +118,7 @@ double calc::CalculatorOperationContainer::evaluate(
     case '/':
         // Handle division by 0
         if (b == 0) {
-            return a;   // return number unmodified
+            return b;   // return number unmodified
         }
         return a / b;
 

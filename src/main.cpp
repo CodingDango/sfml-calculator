@@ -1,5 +1,4 @@
-#include "headers/entities.hpp"   
-#include "headers/helpers.hpp"
+#include "helpers.hpp"
 
 const int WINDOW_WIDTH_PX = 600;
 const int WINDOW_HEIGHT_PX = 800;
@@ -16,26 +15,19 @@ int main()
     ButtonContainer all_buttons {};
 
     core::prepareButtons(all_buttons, calc_data);
-
-    // Load in font for the text
-    sf::Font font {};
-    if (!font.loadFromFile("../assets/fonts/YuGothM.ttc"))
-    {
-        std::cerr << "Font coulnd't be loaded\n";
-        return -1;
-    }
+    
 
     // Creating the first number textbox
-    sf::Text input_num_text {"0", font, 50};
+    DynamicText input_num_text {calc_data.input, assets::my_font, 50};
     input_num_text.setStyle(sf::Text::Bold);
     input_num_text.setPosition(30, 125);
 
-    sf::Text result_text {"0", font, 40};
+    DynamicText result_text {calc_data.result, assets::my_font, 40};
     result_text.setStyle(sf::Text::Bold);
     result_text.setFillColor(sf::Color(148, 148, 148, 100));
     result_text.setPosition(30, 26);
         
-    sf::Text operation_text {"~", font, 45};
+    DynamicText operation_text {calc_data.operation, assets::my_font, 45};
     operation_text.setStyle(sf::Text::Bold);
     operation_text.setFillColor(sf::Color(148, 148, 148, 100));
     operation_text.setPosition(535, 26);
@@ -53,10 +45,9 @@ int main()
             if (event.type == sf::Event::MouseButtonPressed) 
             {
                 all_buttons.checkForClick(mouse_pos, event);
-
-                input_num_text.setString(calc_data.input);
-                result_text.setString(std::to_string(calc_data.result));
-                operation_text.setString(calc_data.operation);
+                input_num_text.update();
+                result_text.update();
+                operation_text.update();
             }
         }  
          

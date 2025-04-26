@@ -12,6 +12,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+target_include_directories(./src/ PRIVATE includes)
+
 # --- Finding SFML ---
 # This is the core part for SFML.
 # find_package attempts to locate the SFML library configuration files.

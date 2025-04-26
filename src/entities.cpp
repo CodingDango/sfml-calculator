@@ -77,3 +77,9 @@ void ButtonContainer::checkForHover(const sf::Vector2f& mouse_pos)
         btn.handleHover(mouse_pos);
     }
 }
+
+
+//===============================================================
+// struct DynamicTextContainer Public Methods
+//===============================================================
+

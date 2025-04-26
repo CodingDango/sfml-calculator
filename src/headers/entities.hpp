@@ -3,6 +3,7 @@
 #include <functional>
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <sstream>
 
 // Forward declarations from helpers.hpp
 namespace utils
@@ -26,6 +27,36 @@ private:
     sf::Color hover_color;
     sf::Color normal_color;
 };
+
+template <typename T>
+class DynamicText : public sf::Text 
+{   
+public:
+    DynamicText(
+        T& stringable_value, 
+        const sf::Font& font, 
+        int font_size
+    )
+    :   Text(
+            "",
+            font,
+            font_size
+        ), 
+        value(stringable_value)
+    {
+        update();
+    }
+
+    void update()
+    {   
+        std::ostringstream oss {};
+        oss << value;
+        setString(oss.str());
+    }
+
+private:
+    T& value;
+}; 
 
 struct ButtonContainer : public std::vector<Button>
 {   
