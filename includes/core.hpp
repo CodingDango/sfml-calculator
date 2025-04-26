@@ -8,12 +8,12 @@
 namespace core
 {   
     void prepareButtons(
-        ButtonContainer& container, 
+        entity::ButtonContainer& container, 
         calc::CalculatorOperationContainer& calc_data
     );
 
     void addButtonFunction(
-        Button& btn, 
+        entity::Button& btn, 
         const assets::ButtonInitializerData& initializer,
         calc::CalculatorOperationContainer& calc_data
     );

@@ -16,20 +16,20 @@ int main()
 
     // Core prep for buttons
     calc::CalculatorOperationContainer calc_data {};
-    ButtonContainer all_buttons {};
+    entity::ButtonContainer all_buttons {};
     core::prepareButtons(all_buttons, calc_data);
     
     // Creating the first number textbox
-    DynamicText input_num_text {calc_data.input, assets::my_font, 50};
+    entity::DynamicText input_num_text {calc_data.input, assets::my_font, 50};
     input_num_text.setStyle(sf::Text::Bold);
     input_num_text.setPosition(30, 125);
 
-    DynamicText result_text {calc_data.result, assets::my_font, 40};
+    entity::DynamicText result_text {calc_data.result, assets::my_font, 40};
     result_text.setStyle(sf::Text::Bold);
     result_text.setFillColor(sf::Color(148, 148, 148, 100));
     result_text.setPosition(30, 26);
         
-    DynamicText operation_text {calc_data.operation, assets::my_font, 45};
+    entity::DynamicText operation_text {calc_data.operation, assets::my_font, 45};
     operation_text.setStyle(sf::Text::Bold);
     operation_text.setFillColor(sf::Color(148, 148, 148, 100));
     operation_text.setPosition(535, 26);

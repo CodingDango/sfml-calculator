@@ -5,7 +5,7 @@
 //===============================================================
 
 void core::prepareButtons(
-  ButtonContainer& container, 
+  entity::ButtonContainer& container, 
   calc::CalculatorOperationContainer& calc_data
 )
 {
@@ -26,7 +26,7 @@ void core::prepareButtons(
       if (i == 0)
       {
           BUTTON_COUNTER += 2;
-          Button clear_button { [&calc_data](){ calc_data.clear(); } };
+          entity::Button clear_button { [&calc_data](){ calc_data.clear(); } };
           clear_button.setTexture(btn_initializer.texture);
           clear_button.setPosition(STARTING_POINT);
           container.push_back(clear_button);
@@ -47,7 +47,7 @@ void core::prepareButtons(
       }
 
       // Add button functionality
-      Button button;
+      entity::Button button;
       addButtonFunction(button, btn_initializer, calc_data);
       button.setTexture(btn_initializer.texture);
       button.setPosition({X, Y});
@@ -56,7 +56,7 @@ void core::prepareButtons(
 }
 
 void core::addButtonFunction(
-  Button& btn, 
+  entity::Button& btn, 
   const assets::ButtonInitializerData& initializer,
   calc::CalculatorOperationContainer& calc_data
 )

@@ -4,7 +4,7 @@
 // class Button Public Methods
 //===============================================================
 
-Button::Button(std::function<void()> c_callback)
+entity::Button::Button(std::function<void()> c_callback)
 :
     Sprite(),
     click_callback(c_callback)
@@ -13,7 +13,7 @@ Button::Button(std::function<void()> c_callback)
     hover_color = utils::modifyColorByFactor(getColor(), 0.8);
 }
 
-Button::Button()
+entity::Button::Button()
 :
     Sprite(),
     click_callback()
@@ -22,7 +22,7 @@ Button::Button()
     hover_color = utils::modifyColorByFactor(getColor(), 0.8);
 }
 
-void Button::handleHover(const sf::Vector2f& mouse_pos)
+void entity::Button::handleHover(const sf::Vector2f& mouse_pos)
 {
     if (getGlobalBounds().contains(mouse_pos))
         setColor(hover_color);
@@ -30,7 +30,7 @@ void Button::handleHover(const sf::Vector2f& mouse_pos)
         setColor(normal_color);
 }
 
-void Button::handleClick(const sf::Vector2f& mouse_pos, const sf::Event& event)
+void entity::Button::handleClick(const sf::Vector2f& mouse_pos, const sf::Event& event)
 {   
     if (
         getGlobalBounds().contains(mouse_pos)
@@ -44,7 +44,7 @@ void Button::handleClick(const sf::Vector2f& mouse_pos, const sf::Event& event)
         setColor(normal_color);
 }
 
-void Button::setClickCallback(std::function<void()> c_callback)
+void entity::Button::setClickCallback(std::function<void()> c_callback)
 {
     click_callback = c_callback;
 }
@@ -54,7 +54,7 @@ void Button::setClickCallback(std::function<void()> c_callback)
 // struct ButtonContainer Public Methods
 //===============================================================
 
-void ButtonContainer::drawButtons(sf::RenderWindow& window)
+void entity::ButtonContainer::drawButtons(sf::RenderWindow& window)
 {
     for (auto& btn : *this)
     {
@@ -62,7 +62,7 @@ void ButtonContainer::drawButtons(sf::RenderWindow& window)
     }
 }
 
-void ButtonContainer::checkForClick(const sf::Vector2f& mouse_pos, const sf::Event& event)
+void entity::ButtonContainer::checkForClick(const sf::Vector2f& mouse_pos, const sf::Event& event)
 {
     for (auto& btn : *this)
     {
@@ -70,7 +70,7 @@ void ButtonContainer::checkForClick(const sf::Vector2f& mouse_pos, const sf::Eve
     }
 }
 
-void ButtonContainer::checkForHover(const sf::Vector2f& mouse_pos)
+void entity::ButtonContainer::checkForHover(const sf::Vector2f& mouse_pos)
 {
     for (auto& btn : *this)
     {
