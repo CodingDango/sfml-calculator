@@ -91,6 +91,13 @@ build CMakeFiles/calculator.dir/src/assets.cpp.obj: CXX_COMPILER__calculator_uns
   OBJECT_DIR = CMakeFiles\calculator.dir
   OBJECT_FILE_DIR = CMakeFiles\calculator.dir\src
 
+build CMakeFiles/calculator.dir/src/input.cpp.obj: CXX_COMPILER__calculator_unscanned_Release D$:/Coding$ Programs/Code/C++/calculator/src/input.cpp || cmake_object_order_depends_target_calculator
+  DEP_FILE = CMakeFiles\calculator.dir\src\input.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG -std=c++17
+  INCLUDES = -I"D:/Coding Programs/Code/C++/calculator/includes"
+  OBJECT_DIR = CMakeFiles\calculator.dir
+  OBJECT_FILE_DIR = CMakeFiles\calculator.dir\src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target calculator
@@ -99,7 +106,7 @@ build CMakeFiles/calculator.dir/src/assets.cpp.obj: CXX_COMPILER__calculator_uns
 #############################################
 # Link the executable calculator.exe
 
-build calculator.exe: CXX_EXECUTABLE_LINKER__calculator_Release CMakeFiles/calculator.dir/src/main.cpp.obj CMakeFiles/calculator.dir/src/entities.cpp.obj CMakeFiles/calculator.dir/src/utils.cpp.obj CMakeFiles/calculator.dir/src/core.cpp.obj CMakeFiles/calculator.dir/src/calc.cpp.obj CMakeFiles/calculator.dir/src/assets.cpp.obj | D$:/Coding$ Programs/MSYS/mingw64/lib/libsfml-graphics.dll.a D$:/Coding$ Programs/MSYS/mingw64/lib/libsfml-window.dll.a D$:/Coding$ Programs/MSYS/mingw64/lib/libsfml-system.dll.a
+build calculator.exe: CXX_EXECUTABLE_LINKER__calculator_Release CMakeFiles/calculator.dir/src/main.cpp.obj CMakeFiles/calculator.dir/src/entities.cpp.obj CMakeFiles/calculator.dir/src/utils.cpp.obj CMakeFiles/calculator.dir/src/core.cpp.obj CMakeFiles/calculator.dir/src/calc.cpp.obj CMakeFiles/calculator.dir/src/assets.cpp.obj CMakeFiles/calculator.dir/src/input.cpp.obj | D$:/Coding$ Programs/MSYS/mingw64/lib/libsfml-graphics.dll.a D$:/Coding$ Programs/MSYS/mingw64/lib/libsfml-window.dll.a D$:/Coding$ Programs/MSYS/mingw64/lib/libsfml-system.dll.a
   FLAGS = -O3 -DNDEBUG
   LINK_LIBRARIES = "D:/Coding Programs/MSYS/mingw64/lib/libsfml-graphics.dll.a"  "D:/Coding Programs/MSYS/mingw64/lib/libsfml-window.dll.a"  "D:/Coding Programs/MSYS/mingw64/lib/libsfml-system.dll.a"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\calculator.dir
