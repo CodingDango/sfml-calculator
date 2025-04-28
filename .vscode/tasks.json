@@ -2,18 +2,48 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"type": "cmake",
-			"label": "CMake: build",
-			"command": "build",
-			"targets": [
-				"[N/A - Select Kit]"
+			"type": "shell",
+			"label": "Build Project (Debug)",
+			"command": "g++",
+			"args": [
+
+				// -- Source files
+				"${workspaceFolder}/src/main.cpp ",
+				"${workspaceFolder}/src/entities.cpp",
+				"${workspaceFolder}/src/utils.cpp ",
+				"${workspaceFolder}/src/core.cpp ",
+				"${workspaceFolder}/src/calc.cpp ",
+				"${workspaceFolder}/src/assets.cpp",
+				"${workspaceFolder}/src/input.cpp",
+
+				// -- Output executable name
+				"-o", 
+				"calculator",
+
+				// -- Library linking
+
+				// -- Include Path
+				"-I", 
+				"D:/Coding Programs/MSYS/mingw64/include/SFML",
+
+				// -- Library Src file path
+				"-L",
+				"D:/Coding Programs/MSYS/mingw64/lib",
+
+				"-lsfml-graphics-d",
+                "-lsfml-window-d",
+                "-lsfml-system-d",
+            
+                // --- Enable Debug Symbols ---
+                "-g"
 			],
 			"group": {
 				"kind": "build",
 				"isDefault": true
 			},
-			"problemMatcher": [],
-			"detail": "CMake template build task"
+			"problemMatcher": [
+				"$gcc"
+			],
 		}
 	]
 }

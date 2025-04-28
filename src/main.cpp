@@ -1,5 +1,6 @@
 #include "core.hpp"
 #include "entities.hpp"
+#include "input.hpp"
 #include "utils.hpp"
 #include <SFML/Graphics.hpp>
 
@@ -47,14 +48,20 @@ int main()
             if (event.type == sf::Event::MouseButtonPressed) 
             {
                 all_buttons.checkForClick(mouse_pos, event);
-                input_num_text.update();
-                result_text.update();
-                operation_text.update();
+            }
+
+            if (event.type == sf::Event::KeyPressed) 
+            {
+                // Detect keypresses
+                input::keyOperations(calc_data, event);
             }
         }  
          
         // Update
         all_buttons.checkForHover(mouse_pos);
+        input_num_text.update();
+        result_text.update();
+        operation_text.update();
 
         // Draw
         window.clear(background_color);

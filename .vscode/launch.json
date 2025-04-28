@@ -9,7 +9,7 @@
       "stopAtEntry": false,
       "externalConsole": true,
       "cwd": "d:/Coding Programs/Code/C Programs/C++/calculator",
-      "program": "d:/Coding Programs/Code/C Programs/C++/calculator/build/Debug/outDebug",
+      "program": "d:/Coding Programs/Code/C Programs/C++/calculator/build/calculator.exe",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

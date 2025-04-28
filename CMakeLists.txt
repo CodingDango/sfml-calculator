@@ -36,6 +36,7 @@ add_executable(
   ./src/core.cpp 
   ./src/calc.cpp 
   ./src/assets.cpp
+  ./src/input.cpp
 ) 
 
 target_include_directories(calculator PRIVATE includes)

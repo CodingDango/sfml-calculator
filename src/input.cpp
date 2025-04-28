@@ -2,31 +2,28 @@
 
 void input::keyOperations(calc::CalculatorOperationContainer& calc_data, const sf::Event& event)
 {   
-    if (event.type == sf::Event::T)
-
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Delete)) 
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Backspace)) 
         calc_data.backspace();
 
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Equal))
+    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Equal) || event.text.unicode == '=')
         calc_data.equal();
 
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Add))
+    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Add) || event.text.unicode == '+')
         calc_data.add();
 
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Subtract))
+    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Subtract) || event.text.unicode == '-')
         calc_data.subtract();
 
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Multiply))
+    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Multiply) || event.text.unicode == '*')
         calc_data.multiply();
 
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Divide))
+    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Divide) || event.text.unicode == '/')
         calc_data.divide();
 
-    else 
-    {   
-        sf::Event::TextEvent::unicode
+    else if (isdigit(event.text.unicode) || event.text.unicode == '.') 
+    {  
         // This is guaranteed to be a digit character. can be period.
-        char character = sf::Keyboard::isKeyPressed(sf::)
-        btn.setClickCallback([&calc_data, digit](){ calc_data.add_digit(digit); });
+        char character = event.text.unicode;
+        calc_data.add_digit(character);
     }
 }

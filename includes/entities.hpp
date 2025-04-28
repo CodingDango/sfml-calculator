@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+
 #include <functional>
 #include <iostream>
 #include <sstream>
@@ -8,7 +9,7 @@
 // Forward declarations from helpers.hpp
 namespace utils
 {
-    sf::Color modifyColorByFactor(sf::Color color, float factor);
+    sf::Color modifyColorByFactor(sf::Color color, float factor); 
 }
 
 //===============================================================
