@@ -1,0 +1,66 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0",
+						"D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/x86_64-w64-mingw32",
+						"D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/backward",
+						"D:/Coding Programs/MSYS/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include",
+						"D:/Coding Programs/MSYS/mingw64/include",
+						"D:/Coding Programs/MSYS/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include-fixed"
+					],
+					"linkDirectories" : [],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : []
+				},
+				"path" : "D:/Coding Programs/MSYS/mingw64/bin/g++.exe",
+				"version" : "14.2.0"
+			},
+			"language" : "CXX",
+			"sourceFileExtensions" : 
+			[
+				"C",
+				"M",
+				"c++",
+				"cc",
+				"cpp",
+				"cxx",
+				"m",
+				"mm",
+				"mpp",
+				"CPP",
+				"ixx",
+				"cppm",
+				"ccm",
+				"cxxm",
+				"c++m"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"implicit" : {},
+				"path" : "D:/Coding Programs/MSYS/mingw64/bin/windres.exe"
+			},
+			"language" : "RC",
+			"sourceFileExtensions" : 
+			[
+				"rc",
+				"RC"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

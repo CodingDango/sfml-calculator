@@ -7,40 +7,44 @@
 			"command": "g++",
 			"args": [
 
-				// -- Source files
-				"${workspaceFolder}/src/main.cpp ",
-				"${workspaceFolder}/src/entities.cpp",
-				"${workspaceFolder}/src/utils.cpp ",
-				"${workspaceFolder}/src/core.cpp ",
-				"${workspaceFolder}/src/calc.cpp ",
-				"${workspaceFolder}/src/assets.cpp",
-				"${workspaceFolder}/src/input.cpp",
+                // -- Source files --
+                "${workspaceFolder}/src/main.cpp",
+                "${workspaceFolder}/src/entities.cpp",
+                "${workspaceFolder}/src/utils.cpp",
+                "${workspaceFolder}/src/core.cpp",
+                "${workspaceFolder}/src/calc.cpp",
+                "${workspaceFolder}/src/assets.cpp",
+                "${workspaceFolder}/src/input.cpp",
 
-				// -- Output executable name
-				"-o", 
-				"calculator",
+                // -- Output executable name (Moved position) --
+                "-o",
+                "${workspaceFolder}/calculator",
 
-				// -- Library linking
+                // -- Include Paths -- (Corrected SFML path)
+                "-I", "D:/Coding Programs/MSYS/mingw64/include", // <<<< CORRECTED THIS
+                "-I", "${workspaceFolder}/includes", // Your project's includes
 
-				// -- Include Path
-				"-I", 
-				"D:/Coding Programs/MSYS/mingw64/include/SFML",
+                // -- Library Path --
+                "-L", "D:/Coding Programs/MSYS/mingw64/lib",
 
-				// -- Library Src file path
-				"-L",
-				"D:/Coding Programs/MSYS/mingw64/lib",
+                // -- Link Libraries (Debug versions) --
+                "libsfml-graphics-s.a",
+                "libsfml-window-s.a",
+                "libsfml-system-s.a",
 
-				"-lsfml-graphics-d",
-                "-lsfml-window-d",
-                "-lsfml-system-d",
-            
-                // --- Enable Debug Symbols ---
+                // -- Enable Debug Symbols --
                 "-g"
-			],
+            ],
+
+			"options": {
+                "cwd": "${workspaceFolder}" // Explicitly set Current Working Directory
+            },
+
 			"group": {
 				"kind": "build",
 				"isDefault": true
 			},
+			
 			"problemMatcher": [
 				"$gcc"
 			],

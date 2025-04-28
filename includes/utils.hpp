@@ -1,4 +1,5 @@
-#pragma once
+#ifndef UTILS_HPP
+#define UTILS_HPP
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
@@ -12,3 +13,5 @@ namespace utils
 
     sf::Font loadFont(const std::string& path);
 }
+
+#endif

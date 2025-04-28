@@ -1,4 +1,5 @@
-#pragma once
+#ifndef ASSETS_HPP
+#define ASSETS_HPP
 
 #include <SFML/Graphics.hpp>
 #include <string>
@@ -21,3 +22,5 @@ namespace assets
     extern const std::vector<ButtonInitializerData> button_initializers;
     extern const sf::Font my_font;
 }
+
+#endif

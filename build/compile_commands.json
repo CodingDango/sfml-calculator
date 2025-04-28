@@ -1,0 +1,44 @@
+[
+{
+  "directory": "D:/Coding Programs/Code/C++/calculator/build",
+  "command": "\"D:\\Coding Programs\\MSYS\\mingw64\\bin\\g++.exe\"  @CMakeFiles/calculator.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\calculator.dir\\src\\main.cpp.obj -c \"D:\\Coding Programs\\Code\\C++\\calculator\\src\\main.cpp\"",
+  "file": "D:/Coding Programs/Code/C++/calculator/src/main.cpp",
+  "output": "CMakeFiles/calculator.dir/src/main.cpp.obj"
+},
+{
+  "directory": "D:/Coding Programs/Code/C++/calculator/build",
+  "command": "\"D:\\Coding Programs\\MSYS\\mingw64\\bin\\g++.exe\"  @CMakeFiles/calculator.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\calculator.dir\\src\\entities.cpp.obj -c \"D:\\Coding Programs\\Code\\C++\\calculator\\src\\entities.cpp\"",
+  "file": "D:/Coding Programs/Code/C++/calculator/src/entities.cpp",
+  "output": "CMakeFiles/calculator.dir/src/entities.cpp.obj"
+},
+{
+  "directory": "D:/Coding Programs/Code/C++/calculator/build",
+  "command": "\"D:\\Coding Programs\\MSYS\\mingw64\\bin\\g++.exe\"  @CMakeFiles/calculator.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\calculator.dir\\src\\utils.cpp.obj -c \"D:\\Coding Programs\\Code\\C++\\calculator\\src\\utils.cpp\"",
+  "file": "D:/Coding Programs/Code/C++/calculator/src/utils.cpp",
+  "output": "CMakeFiles/calculator.dir/src/utils.cpp.obj"
+},
+{
+  "directory": "D:/Coding Programs/Code/C++/calculator/build",
+  "command": "\"D:\\Coding Programs\\MSYS\\mingw64\\bin\\g++.exe\"  @CMakeFiles/calculator.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\calculator.dir\\src\\core.cpp.obj -c \"D:\\Coding Programs\\Code\\C++\\calculator\\src\\core.cpp\"",
+  "file": "D:/Coding Programs/Code/C++/calculator/src/core.cpp",
+  "output": "CMakeFiles/calculator.dir/src/core.cpp.obj"
+},
+{
+  "directory": "D:/Coding Programs/Code/C++/calculator/build",
+  "command": "\"D:\\Coding Programs\\MSYS\\mingw64\\bin\\g++.exe\"  @CMakeFiles/calculator.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\calculator.dir\\src\\calc.cpp.obj -c \"D:\\Coding Programs\\Code\\C++\\calculator\\src\\calc.cpp\"",
+  "file": "D:/Coding Programs/Code/C++/calculator/src/calc.cpp",
+  "output": "CMakeFiles/calculator.dir/src/calc.cpp.obj"
+},
+{
+  "directory": "D:/Coding Programs/Code/C++/calculator/build",
+  "command": "\"D:\\Coding Programs\\MSYS\\mingw64\\bin\\g++.exe\"  @CMakeFiles/calculator.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\calculator.dir\\src\\assets.cpp.obj -c \"D:\\Coding Programs\\Code\\C++\\calculator\\src\\assets.cpp\"",
+  "file": "D:/Coding Programs/Code/C++/calculator/src/assets.cpp",
+  "output": "CMakeFiles/calculator.dir/src/assets.cpp.obj"
+},
+{
+  "directory": "D:/Coding Programs/Code/C++/calculator/build",
+  "command": "\"D:\\Coding Programs\\MSYS\\mingw64\\bin\\g++.exe\"  @CMakeFiles/calculator.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\calculator.dir\\src\\input.cpp.obj -c \"D:\\Coding Programs\\Code\\C++\\calculator\\src\\input.cpp\"",
+  "file": "D:/Coding Programs/Code/C++/calculator/src/input.cpp",
+  "output": "CMakeFiles/calculator.dir/src/input.cpp.obj"
+}
+]

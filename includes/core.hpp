@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CORE_HPP
+#define CORE_HPP
 
 #include "assets.hpp"
 #include "calc.hpp"
@@ -18,3 +19,5 @@ namespace core
         calc::CalculatorOperationContainer& calc_data
     );
 }
+
+#endif

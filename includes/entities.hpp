@@ -1,4 +1,5 @@
-#pragma once
+#ifndef ENTITIES_HPP
+#define ENTITIES_HPP
 
 #include <SFML/Graphics.hpp>
 
@@ -76,3 +77,5 @@ namespace entity
         T& value;
     }; 
 }
+
+#endif

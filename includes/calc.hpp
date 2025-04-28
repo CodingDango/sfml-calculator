@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CALC_HPP
+#define CALC_HPP
 
 #include <sstream>
 #include <string>
@@ -29,3 +30,5 @@ namespace calc
         void applyResult(std::stringstream& ss);
     }; 
 }
+
+#endif
