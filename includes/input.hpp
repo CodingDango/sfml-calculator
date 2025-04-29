@@ -6,7 +6,8 @@
 
 namespace input
 {
-    void keyOperations(calc::CalculatorOperationContainer& calc_data, const sf::Event& event);
+    void handleKeyPress(calc::CalculatorOperationContainer& calc_data, const sf::Event& event);
+    void handleTextEntered(calc::CalculatorOperationContainer& calc_data, const sf::Event& event);
 } 
 
 #endif

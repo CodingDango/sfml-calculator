@@ -258,6 +258,8 @@ CMakeFiles/calculator.dir/src/core.cpp.obj: \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/istream \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/istream.tcc \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/sstream.tcc \
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/iomanip \
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/quoted_string.h \
  D:/Coding\ Programs/Code/C++/calculator/includes/entities.hpp \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/functional \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/std_function.h \

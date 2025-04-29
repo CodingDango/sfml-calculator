@@ -149,6 +149,16 @@ CMakeFiles/calculator.dir/src/input.cpp.obj: \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/ostream.tcc \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/istream.tcc \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/sstream.tcc \
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/iomanip \
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/locale \
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.h \
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/ctime \
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/time_members.h \
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/messages_members.h \
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/codecvt.h \
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/locale_conv.h \
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/quoted_string.h \
  D:/Coding\ Programs/MSYS/mingw64/include/SFML/Window.hpp \
  D:/Coding\ Programs/MSYS/mingw64/include/SFML/System.hpp \
  D:/Coding\ Programs/MSYS/mingw64/include/SFML/Config.hpp \
@@ -173,14 +183,6 @@ CMakeFiles/calculator.dir/src/input.cpp.obj: \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/stl_tempbuf.h \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/pstl/glue_algorithm_defs.h \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/pstl/execution_defs.h \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/locale \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.h \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/ctime \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/time_members.h \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/messages_members.h \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/codecvt.h \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/locale_conv.h \
  D:/Coding\ Programs/MSYS/mingw64/include/SFML/System/Utf.inl \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/iterator \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/stream_iterator.h \

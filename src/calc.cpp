@@ -1,8 +1,14 @@
 #include "calc.hpp"
+#include <iostream>
 
 //===============================================================
 // Class CalculatorOperationContainer Public Methods Definitions
 //===============================================================
+
+calc::CalculatorOperationContainer::CalculatorOperationContainer()
+{
+    reset();
+}
 
 void calc::CalculatorOperationContainer::add_digit(char digit)
 {   
@@ -14,10 +20,10 @@ void calc::CalculatorOperationContainer::add_digit(char digit)
 
 void calc::CalculatorOperationContainer::reset()
 {   
-    input.clear();
     result = 0;
-    operation = '~';
+    updateResultString();           // updates_result string
     is_operation_inputted = false;
+    input.clear();
 }
 
 void calc::CalculatorOperationContainer::backspace()
@@ -41,8 +47,7 @@ void calc::CalculatorOperationContainer::equal()
     if (!is_operation_inputted || input.size() == 0) 
         return;
 
-    std::stringstream ss {input};   // ss contains the second number
-    applyResult(ss);  
+    applyResult();  
     
     // After using equals, reset the operations.
     is_operation_inputted = false;
@@ -108,14 +113,25 @@ void calc::CalculatorOperationContainer::doOperatorOperation(char operation)
   if (input.size() == 0)
       return;
 
-  std::stringstream ss {input};
-  applyResult(ss);
+  applyResult();
 }
 
-void calc::CalculatorOperationContainer::applyResult(std::stringstream& ss)
+void calc::CalculatorOperationContainer::applyResult()
 {   
-  double input_num {};
-  ss >> input_num;
-  result = evaluate(result, input_num, operation);     
-  input.clear();
+    std::stringstream ss {input};
+    double input_num {};
+    ss >> input_num;                            // From string result
+
+    result = evaluate(result, input_num, operation);  
+    updateResultString();
+
+    input.clear();
+}
+
+void calc::CalculatorOperationContainer::updateResultString()
+{
+    std::stringstream ss {}; 
+    ss << std::fixed << std::setprecision(5);   // Show 5 digits after decimal point.
+    ss << result;                               // Result is the number
+    result_string = ss.str();
 }

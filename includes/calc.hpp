@@ -3,16 +3,21 @@
 
 #include <sstream>
 #include <string>
+#include <iomanip>  // Precision.
 
 namespace calc 
 {   
     class CalculatorOperationContainer
     {   
     public:
-        std::string input {};
-        double result {};
-        char operation {};
-        bool is_operation_inputted = false;
+        CalculatorOperationContainer();
+
+        std::string input;
+        std::string result_string;
+
+        double result;
+        char operation;
+        bool is_operation_inputted;
 
         void add_digit(char digit);
         void reset();
@@ -27,7 +32,8 @@ namespace calc
     private:
         double evaluate(double a, double b, char operation) const;
         void doOperatorOperation(char operation);
-        void applyResult(std::stringstream& ss);
+        void applyResult();
+        void updateResultString();
     }; 
 }
 

@@ -5,6 +5,7 @@
 #include "input.hpp"
 #include "utils.hpp"
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
 const int WINDOW_WIDTH_PX = 600;
 const int WINDOW_HEIGHT_PX = 800;
@@ -27,7 +28,7 @@ int main()
     input_num_text.setStyle(sf::Text::Bold);
     input_num_text.setPosition(30, 125);
 
-    entity::DynamicText result_text {calc_data.result, assets::my_font, 40};
+    entity::DynamicText result_text {calc_data.result_string, assets::my_font, 40};
     result_text.setStyle(sf::Text::Bold);
     result_text.setFillColor(sf::Color(148, 148, 148, 100));
     result_text.setPosition(30, 26);
@@ -43,19 +44,24 @@ int main()
         sf::Vector2f mouse_pos (sf::Mouse::getPosition(window));
 
         while (window.pollEvent(event)) 
-        {
-            if (event.type == sf::Event::Closed)
+        {   
+            switch (event.type)
+            {
+            case (sf::Event::Closed):
                 window.close();
+                break;
 
-            if (event.type == sf::Event::MouseButtonPressed) 
-            {
+            case (sf::Event::MouseButtonPressed):
                 all_buttons.checkForClick(mouse_pos, event);
-            }
+                break;
 
-            if (event.type == sf::Event::KeyPressed) 
-            {
-                // Detect keypresses
-                input::keyOperations(calc_data, event);
+            case (sf::Event::TextEntered):
+                input::handleTextEntered(calc_data, event);
+                break;
+
+            case (sf::Event::KeyPressed):
+                input::handleKeyPress(calc_data, event);
+                break;
             }
         }  
          
