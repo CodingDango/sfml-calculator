@@ -14,7 +14,6 @@ void input::handleKeyPress(
             break;
         }
     }
-
     else
     {
         switch (event.key.code)
@@ -51,6 +50,7 @@ void input::handleTextEntered(
     {
         char character = event.text.unicode;
         calc_data.add_digit(character);
+        return;
     }
 
     // If the pressed button outputted an operator.

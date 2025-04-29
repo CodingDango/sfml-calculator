@@ -1,5 +1,4 @@
 #include "calc.hpp"
-#include <iostream>
 
 //===============================================================
 // Class CalculatorOperationContainer Public Methods Definitions

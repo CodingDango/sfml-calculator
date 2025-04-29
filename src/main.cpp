@@ -4,6 +4,7 @@
 #include "entities.hpp"
 #include "input.hpp"
 #include "utils.hpp"
+
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
