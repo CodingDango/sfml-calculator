@@ -1,6 +1,8 @@
 #ifndef ENTITIES_HPP
 #define ENTITIES_HPP
 
+#include "clipboard.hpp"
+
 #include <SFML/Graphics.hpp>
 
 #include <functional>
@@ -74,11 +76,12 @@ namespace entity
 
     struct CopyableTextContainer
     {
-        std::vector<CopyableText<char>> type_char; 
-        std::vector<CopyableText<std::string>> type_string;
+        std::vector<CopyableText<char>> char_texts; 
+        std::vector<CopyableText<std::string>> string_texts;
 
         void updateAll();
         void drawAll(sf::RenderWindow& target);
+        void checkForPress(const sf::Vector2f& mouse_pos, const sf::Event& event, HWND owner_hwnd);
     };
 }
 

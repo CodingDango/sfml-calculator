@@ -84,18 +84,27 @@ void entity::ButtonContainer::checkForHover(const sf::Vector2f& mouse_pos)
 
 void entity::CopyableTextContainer::updateAll()
 {
-    for (auto& c : type_char)
-        c.update();
-
-    for (auto& s : type_string)
-        s.update();
+    for (auto& c : char_texts) { c.update(); }
+    for (auto& s : string_texts) { s.update(); } 
 }
 
 void entity::CopyableTextContainer::drawAll(sf::RenderWindow& target)
 {
-    for (auto& c : type_char)
-        target.draw(c);
+    for (auto& c : char_texts) { target.draw(c); }
+    for (auto& s : string_texts) { target.draw(s); }
+}
 
-    for (auto& s : type_string)
-        target.draw(s);
-};
+void entity::CopyableTextContainer::checkForPress(const sf::Vector2f& mouse_pos, const sf::Event& event, HWND owner_hwnd)
+{
+    for (auto& c : char_texts) 
+    { 
+        if (c.getGlobalBounds().contains(mouse_pos) && event.mouseButton.button == sf::Mouse::Left)
+            clipboard::copyStringToClipboard(c.getString(), owner_hwnd);
+    }
+
+    for (auto& s : string_texts) 
+    { 
+        if (s.getGlobalBounds().contains(mouse_pos) && event.mouseButton.button == sf::Mouse::Left)
+            clipboard::copyStringToClipboard(s.getString(), owner_hwnd);
+    }
+}   

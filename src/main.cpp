@@ -1,6 +1,7 @@
 #include "assets.hpp"
 #include "core.hpp"
 #include "calc.hpp"
+#include "clipboard.hpp"
 #include "entities.hpp"
 #include "input.hpp"
 #include "utils.hpp"
@@ -18,6 +19,9 @@ int main()
         sf::VideoMode({WINDOW_WIDTH_PX, WINDOW_HEIGHT_PX}), 
         "Calculator"
     };
+
+    // For clipboard
+    HWND hwnd = static_cast<HWND>(window.getSystemHandle());
 
     // Core prep for buttons
     calc::CalculatorOperationContainer calc_data {};
@@ -43,6 +47,7 @@ int main()
 
             case (sf::Event::MouseButtonPressed):
                 all_buttons.checkForClick(mouse_pos, event);
+                texts.checkForPress(mouse_pos, event, hwnd);
                 break;
 
             case (sf::Event::TextEntered):
