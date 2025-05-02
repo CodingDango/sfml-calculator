@@ -157,5 +157,4 @@ CMakeFiles/calculator.dir/src/calc.cpp.obj: \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/codecvt.h \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/locale_conv.h \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/quoted_string.h \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/iostream
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/quoted_string.h
