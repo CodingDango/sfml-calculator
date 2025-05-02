@@ -40,5 +40,11 @@
   "command": "\"D:\\Coding Programs\\MSYS\\mingw64\\bin\\g++.exe\"  @CMakeFiles/calculator.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\calculator.dir\\src\\input.cpp.obj -c \"D:\\Coding Programs\\Code\\C++\\calculator\\src\\input.cpp\"",
   "file": "D:/Coding Programs/Code/C++/calculator/src/input.cpp",
   "output": "CMakeFiles/calculator.dir/src/input.cpp.obj"
+},
+{
+  "directory": "D:/Coding Programs/Code/C++/calculator/build",
+  "command": "\"D:\\Coding Programs\\MSYS\\mingw64\\bin\\g++.exe\"  @CMakeFiles/calculator.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\calculator.dir\\src\\clipboard.cpp.obj -c \"D:\\Coding Programs\\Code\\C++\\calculator\\src\\clipboard.cpp\"",
+  "file": "D:/Coding Programs/Code/C++/calculator/src/clipboard.cpp",
+  "output": "CMakeFiles/calculator.dir/src/clipboard.cpp.obj"
 }
 ]

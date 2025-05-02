@@ -176,6 +176,30 @@ src/calc.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\calculator.dir\build.make CMakeFiles/calculator.dir/src/calc.cpp.s
 .PHONY : src/calc.cpp.s
 
+src/clipboard.obj: src/clipboard.cpp.obj
+.PHONY : src/clipboard.obj
+
+# target to build an object file
+src/clipboard.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\calculator.dir\build.make CMakeFiles/calculator.dir/src/clipboard.cpp.obj
+.PHONY : src/clipboard.cpp.obj
+
+src/clipboard.i: src/clipboard.cpp.i
+.PHONY : src/clipboard.i
+
+# target to preprocess a source file
+src/clipboard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\calculator.dir\build.make CMakeFiles/calculator.dir/src/clipboard.cpp.i
+.PHONY : src/clipboard.cpp.i
+
+src/clipboard.s: src/clipboard.cpp.s
+.PHONY : src/clipboard.s
+
+# target to generate assembly for a file
+src/clipboard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\calculator.dir\build.make CMakeFiles/calculator.dir/src/clipboard.cpp.s
+.PHONY : src/clipboard.cpp.s
+
 src/core.obj: src/core.cpp.obj
 .PHONY : src/core.obj
 
@@ -311,6 +335,9 @@ help:
 	@echo ... src/calc.obj
 	@echo ... src/calc.i
 	@echo ... src/calc.s
+	@echo ... src/clipboard.obj
+	@echo ... src/clipboard.i
+	@echo ... src/clipboard.s
 	@echo ... src/core.obj
 	@echo ... src/core.i
 	@echo ... src/core.s

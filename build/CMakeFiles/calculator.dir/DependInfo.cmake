@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/Coding Programs/Code/C++/calculator/src/assets.cpp" "CMakeFiles/calculator.dir/src/assets.cpp.obj" "gcc" "CMakeFiles/calculator.dir/src/assets.cpp.obj.d"
   "D:/Coding Programs/Code/C++/calculator/src/calc.cpp" "CMakeFiles/calculator.dir/src/calc.cpp.obj" "gcc" "CMakeFiles/calculator.dir/src/calc.cpp.obj.d"
+  "D:/Coding Programs/Code/C++/calculator/src/clipboard.cpp" "CMakeFiles/calculator.dir/src/clipboard.cpp.obj" "gcc" "CMakeFiles/calculator.dir/src/clipboard.cpp.obj.d"
   "D:/Coding Programs/Code/C++/calculator/src/core.cpp" "CMakeFiles/calculator.dir/src/core.cpp.obj" "gcc" "CMakeFiles/calculator.dir/src/core.cpp.obj.d"
   "D:/Coding Programs/Code/C++/calculator/src/entities.cpp" "CMakeFiles/calculator.dir/src/entities.cpp.obj" "gcc" "CMakeFiles/calculator.dir/src/entities.cpp.obj.d"
   "D:/Coding Programs/Code/C++/calculator/src/input.cpp" "CMakeFiles/calculator.dir/src/input.cpp.obj" "gcc" "CMakeFiles/calculator.dir/src/input.cpp.obj.d"
