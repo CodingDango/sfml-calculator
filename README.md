@@ -21,7 +21,7 @@ It's only for fun, even though the project idea is trivial
     /     :   (Divide operation)
     
     Enter     :   (Equate expression)
-    Equals    :   (Equate expression)           
+    =    :   (Equate expression)           
     CTRL + C  :   (Resets)        
 
 ## Copying to clipboard:
