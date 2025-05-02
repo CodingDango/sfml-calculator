@@ -1,10 +1,11 @@
 #ifndef ENTITIES_HPP
 #define ENTITIES_HPP
 
+#include "clipboard.hpp"
+
 #include <SFML/Graphics.hpp>
 
 #include <functional>
-#include <iostream>
 #include <sstream>
 
 // Forward declarations from helpers.hpp
@@ -44,24 +45,20 @@ namespace entity
 
 
     //===============================================================
-    // DynamicText related content
+    // CopyableText related content
     //===============================================================
 
     template <typename T>
-    class DynamicText : public sf::Text 
+    class CopyableText : public sf::Text 
     {   
     public:
-        DynamicText(
+        CopyableText(
             T& stringable_value, 
             const sf::Font& font, 
             int font_size
         )
-        :   Text(
-                "",
-                font,
-                font_size
-            ), 
-            value(stringable_value)
+        :   sf::Text ("", font, font_size),
+            value ( stringable_value )
         {
             update();
         }
@@ -76,6 +73,16 @@ namespace entity
     private:
         T& value;
     }; 
+
+    struct CopyableTextContainer
+    {
+        std::vector<CopyableText<char>> char_texts; 
+        std::vector<CopyableText<std::string>> string_texts;
+
+        void updateAll();
+        void drawAll(sf::RenderWindow& target);
+        void checkForPress(const sf::Vector2f& mouse_pos, const sf::Event& event, HWND owner_hwnd);
+    };
 }
 
 #endif

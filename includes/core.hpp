@@ -4,6 +4,7 @@
 #include "assets.hpp"
 #include "calc.hpp"
 #include "entities.hpp"
+
 #include <SFML/Graphics.hpp>
 
 namespace core
@@ -18,6 +19,8 @@ namespace core
         const assets::ButtonInitializerData& initializer,
         calc::CalculatorOperationContainer& calc_data
     );
+
+    void prepareCopyableTexts(entity::CopyableTextContainer& container, calc::CalculatorOperationContainer& calc_data);
 }
 
 #endif

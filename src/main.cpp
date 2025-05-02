@@ -1,6 +1,7 @@
 #include "assets.hpp"
 #include "core.hpp"
 #include "calc.hpp"
+#include "clipboard.hpp"
 #include "entities.hpp"
 #include "input.hpp"
 #include "utils.hpp"
@@ -19,26 +20,18 @@ int main()
         "Calculator"
     };
 
+    // For clipboard
+    HWND hwnd = static_cast<HWND>(window.getSystemHandle());
+
     // Core prep for buttons
     calc::CalculatorOperationContainer calc_data {};
     entity::ButtonContainer all_buttons {};
     core::prepareButtons(all_buttons, calc_data);
     
-    // Creating the first number textbox
-    entity::DynamicText input_num_text {calc_data.input, assets::my_font, 50};
-    input_num_text.setStyle(sf::Text::Bold);
-    input_num_text.setPosition(30, 125);
+    // Prepare the text boxes
+    entity::CopyableTextContainer texts {};
+    core::prepareCopyableTexts(texts, calc_data);
 
-    entity::DynamicText result_text {calc_data.result_string, assets::my_font, 40};
-    result_text.setStyle(sf::Text::Bold);
-    result_text.setFillColor(sf::Color(148, 148, 148, 100));
-    result_text.setPosition(30, 26);
-        
-    entity::DynamicText operation_text {calc_data.operation, assets::my_font, 45};
-    operation_text.setStyle(sf::Text::Bold);
-    operation_text.setFillColor(sf::Color(148, 148, 148, 100));
-    operation_text.setPosition(535, 26);
-    
     while (window.isOpen())
     {
         sf::Event event;
@@ -54,6 +47,7 @@ int main()
 
             case (sf::Event::MouseButtonPressed):
                 all_buttons.checkForClick(mouse_pos, event);
+                texts.checkForPress(mouse_pos, event, hwnd);
                 break;
 
             case (sf::Event::TextEntered):
@@ -68,16 +62,12 @@ int main()
          
         // Update
         all_buttons.checkForHover(mouse_pos);
-        input_num_text.update();
-        result_text.update();
-        operation_text.update();
+        texts.updateAll();
 
         // Draw
         window.clear(background_color);
         all_buttons.drawButtons(window);
-        window.draw(input_num_text);
-        window.draw(result_text);
-        window.draw(operation_text);
+        texts.drawAll(window);
         window.display();
     }
 }
