@@ -10,6 +10,16 @@ It's been 2 weeks since I've starting; <br>
 However, not all my time is spent on this project. <br> 
 It's only for fun, even though the project idea is trivial
 
+# How to install
+Make sure you have SFML 2.6 Installed. Currently, 
+this only version only works on windows. (since of the clipboard logic).
+
+!IMPORTANT - Make sure you cd into build when compiling and run. The assets will not load if so.
+
+1. Run `cmake ..` inside ./build folder.
+2. Run `ninja` inside the ./build folder.
+3. Run `./calculator` which is the program name/ 
+
 # Usability Controls
 
 ## Keyboard Inputs:
@@ -33,4 +43,3 @@ It's only for fun, even though the project idea is trivial
 - ✅ Implement key inputs for user experience. CTRL-C to clear, press numbers, periods, etc.
 - ✅ Buttons darken on hover.
 - ✅ UI Looks decent.. not horrible.
-
