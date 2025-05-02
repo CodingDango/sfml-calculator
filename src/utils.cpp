@@ -26,3 +26,9 @@ sf::Font utils::loadFont(const std::string& path)
         std::cerr << "Font with path '" << path << "' could not be loaded.\n";
     return font;
 }
+
+sf::Color utils::modifyColorOpacity(sf::Color color, double value)
+{
+    color.a = std::min<int>(255, std::max<int>(0, value));
+    return color;
+}

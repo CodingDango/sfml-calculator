@@ -95,19 +95,29 @@ void entity::CopyableTextContainer::drawAll(sf::RenderWindow& target)
     for (auto& s : string_texts) { target.draw(s); }
 }
 
-void entity::CopyableTextContainer::checkForPress(const sf::Vector2f& mouse_pos, const sf::Event& event, HWND owner_hwnd)
+bool entity::CopyableTextContainer::checkForPress(const sf::Vector2f& mouse_pos, const sf::Event& event, HWND owner_hwnd)
 {
+    bool has_text_been_clicked = false;
+
     for (auto& c : char_texts) 
     { 
         if (c.getGlobalBounds().contains(mouse_pos) && event.mouseButton.button == sf::Mouse::Left)
+        {
             clipboard::copyStringToClipboard(c.getString(), owner_hwnd);
+            has_text_been_clicked = true;
+        }
     }
 
     for (auto& s : string_texts) 
     { 
         if (s.getGlobalBounds().contains(mouse_pos) && event.mouseButton.button == sf::Mouse::Left)
+        {
             clipboard::copyStringToClipboard(s.getString(), owner_hwnd);
+            has_text_been_clicked = true;
+        }
     }
+    
+    return has_text_been_clicked;
 }   
 
 void entity::CopyableTextContainer::checkForHover(const sf::Vector2f& mouse_pos)

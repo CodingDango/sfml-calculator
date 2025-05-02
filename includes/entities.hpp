@@ -103,7 +103,7 @@ namespace entity
 
         void updateAll();
         void drawAll(sf::RenderWindow& target);
-        void checkForPress(const sf::Vector2f& mouse_pos, const sf::Event& event, HWND owner_hwnd);
+        bool checkForPress(const sf::Vector2f& mouse_pos, const sf::Event& event, HWND owner_hwnd);
         void checkForHover(const sf::Vector2f& mouse_pos);
     };
 }

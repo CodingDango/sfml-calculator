@@ -22,6 +22,7 @@ void calc::CalculatorOperationContainer::reset()
     result = 0;
     updateResultString();           // updates_result string
     is_operation_inputted = false;
+    operation = '~';
     input.clear();
 }
 

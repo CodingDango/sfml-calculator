@@ -19,6 +19,9 @@ int main()
         sf::VideoMode({WINDOW_WIDTH_PX, WINDOW_HEIGHT_PX}), 
         "Calculator"
     };
+    window.setFramerateLimit(60);
+
+    sf::Clock clock;
 
     // For clipboard
     HWND hwnd = static_cast<HWND>(window.getSystemHandle());
@@ -32,10 +35,16 @@ int main()
     entity::CopyableTextContainer texts {};
     core::prepareCopyableTexts(texts, calc_data);
 
+    // Copy notification
+    sf::Sprite copy_notification {assets::texture_copy_notification};
+    copy_notification.setColor(utils::modifyColorOpacity(copy_notification.getColor(), 0));
+    copy_notification.setPosition(350, 26);
+    
     while (window.isOpen())
     {
-        sf::Event event;
+        float delta_time = clock.restart().asSeconds();
         sf::Vector2f mouse_pos (sf::Mouse::getPosition(window));
+        sf::Event event;
 
         while (window.pollEvent(event)) 
         {   
@@ -47,7 +56,11 @@ int main()
 
             case (sf::Event::MouseButtonPressed):
                 all_buttons.checkForClick(mouse_pos, event);
-                texts.checkForPress(mouse_pos, event, hwnd);
+
+                // If copied to clipboard, show.
+                if (texts.checkForPress(mouse_pos, event, hwnd))
+                    copy_notification.setColor(utils::modifyColorOpacity(copy_notification.getColor(), 255));
+                    
                 break;
 
             case (sf::Event::TextEntered):
@@ -65,10 +78,14 @@ int main()
         texts.checkForHover(mouse_pos);
         texts.updateAll();
 
+        double new_opacity = copy_notification.getColor().a - (100 * delta_time);
+        copy_notification.setColor(utils::modifyColorOpacity(copy_notification.getColor(), new_opacity));
+        
         // Draw
         window.clear(background_color);
         all_buttons.drawButtons(window);
         texts.drawAll(window);
+        window.draw(copy_notification);
         window.display();
     }
 }

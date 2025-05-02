@@ -108,6 +108,6 @@ void core::prepareCopyableTexts(entity::CopyableTextContainer& container, calc::
     operation_text.setStyle(sf::Text::Bold);
     operation_text.setNormalFillColor({148, 148, 148});
     operation_text.setHoverColor({166, 169, 225});
-    operation_text.setPosition(535, 26);
+    operation_text.setPosition(535, 21);
     container.char_texts.push_back(operation_text);
 }

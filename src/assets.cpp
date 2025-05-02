@@ -37,6 +37,5 @@ const std::vector<assets::ButtonInitializerData> assets::button_initializers = {
   ButtonInitializerData("=", utils::loadTexture("./assets/op-btns/oper-equals.png")),
 }; 
 
-const sf::Font assets::my_font { 
-  utils::loadFont("./assets/fonts/YuGothM.ttc")
-};
+const sf::Font assets::my_font { utils::loadFont("./assets/fonts/YuGothM.ttc") };
+const sf::Texture assets::texture_copy_notification { utils::loadTexture("./assets/notify.png") };

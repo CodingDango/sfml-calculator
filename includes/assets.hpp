@@ -21,6 +21,7 @@ namespace assets
 
     extern const std::vector<ButtonInitializerData> button_initializers;
     extern const sf::Font my_font;
+    extern const sf::Texture texture_copy_notification;
 }
 
 #endif
