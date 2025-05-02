@@ -39,6 +39,8 @@ this only version only works on windows. (since of the clipboard logic).
     - Just click on the texts (which aren't buttons) and it will be copied onto the clipboard.
 
 ## Requirements
+- ✅ Notifies the user they copied something.
+- ✅ Texts that can be copied glow a light purple for interactivity.
 - ✅ Feature to copy either the results text, or the input text to the os clipboard, through right clicking.
 - ✅ Implement key inputs for user experience. CTRL-C to clear, press numbers, periods, etc.
 - ✅ Buttons darken on hover.
