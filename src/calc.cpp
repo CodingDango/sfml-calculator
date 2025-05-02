@@ -46,11 +46,7 @@ void calc::CalculatorOperationContainer::equal()
     if (!is_operation_inputted || input.size() == 0) 
         return;
 
-    applyResult();  
-    
-    // After using equals, reset the operations.
-    is_operation_inputted = false;
-    operation = false;                   
+    applyResult();               
 }
 
 void calc::CalculatorOperationContainer::add()
