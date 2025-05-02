@@ -13,16 +13,16 @@ It's only for fun, even though the project idea is trivial
 # Usability Controls
 
 ## Keyboard Inputs:
-    - 0-9   :   (Add a digit)     
-    - .     :   (Add a decimal point)    
-    - +     :   (Add operation)      
-    - -     :   (Subtract operation)
-    - *     :   (Multiply operation)
-    - /     :   (Divide operation)
+    0-9   :   (Add a digit)     
+    .     :   (Add a decimal point)    
+    +     :   (Add operation)      
+    -     :   (Subtract operation)
+    *     :   (Multiply operation)
+    /     :   (Divide operation)
     
-    - Enter     :   (Equate expression)
-    - Equals    :   (Equate expression)           
-    - CTRL + C  :   (Resets)        
+    Enter     :   (Equate expression)
+    Equals    :   (Equate expression)           
+    CTRL + C  :   (Resets)        
 
 ## Copying to clipboard:
 
