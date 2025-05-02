@@ -77,3 +77,25 @@ void entity::ButtonContainer::checkForHover(const sf::Vector2f& mouse_pos)
         btn.handleHover(mouse_pos);
     }
 }
+
+//===============================================================
+// struct CopyableTextContainer definitions
+//===============================================================
+
+void entity::CopyableTextContainer::updateAll()
+{
+    for (auto& c : type_char)
+        c.update();
+
+    for (auto& s : type_string)
+        s.update();
+}
+
+void entity::CopyableTextContainer::drawAll(sf::RenderWindow& target)
+{
+    for (auto& c : type_char)
+        target.draw(c);
+
+    for (auto& s : type_string)
+        target.draw(s);
+};

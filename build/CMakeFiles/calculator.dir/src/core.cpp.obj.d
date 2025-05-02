@@ -269,5 +269,4 @@ CMakeFiles/calculator.dir/src/core.cpp.obj: \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/hashtable_policy.h \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/array \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/compare \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/iostream
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/compare

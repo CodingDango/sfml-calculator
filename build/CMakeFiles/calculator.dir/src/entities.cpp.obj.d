@@ -261,8 +261,7 @@ CMakeFiles/calculator.dir/src/entities.cpp.obj: \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/array \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/compare \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/iostream \
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/sstream \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/istream \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/istream.tcc \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/sstream \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/sstream.tcc

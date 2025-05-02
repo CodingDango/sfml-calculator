@@ -354,7 +354,6 @@ CMakeFiles/calculator.dir/src/calc.cpp.obj: D:/Coding\ Programs/Code/C++/calcula
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/iomanip \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/ios \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/iosfwd \
-  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/iostream \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/istream \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/locale \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/new \
@@ -619,7 +618,6 @@ CMakeFiles/calculator.dir/src/core.cpp.obj: D:/Coding\ Programs/Code/C++/calcula
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/iomanip \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/ios \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/iosfwd \
-  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/iostream \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/istream \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/iterator \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/locale \
@@ -887,7 +885,6 @@ CMakeFiles/calculator.dir/src/entities.cpp.obj: D:/Coding\ Programs/Code/C++/cal
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/initializer_list \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/ios \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/iosfwd \
-  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/iostream \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/istream \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/iterator \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/locale \

@@ -4,7 +4,6 @@
 #include <SFML/Graphics.hpp>
 
 #include <functional>
-#include <iostream>
 #include <sstream>
 
 // Forward declarations from helpers.hpp
@@ -44,24 +43,20 @@ namespace entity
 
 
     //===============================================================
-    // DynamicText related content
+    // CopyableText related content
     //===============================================================
 
     template <typename T>
-    class DynamicText : public sf::Text 
+    class CopyableText : public sf::Text 
     {   
     public:
-        DynamicText(
+        CopyableText(
             T& stringable_value, 
             const sf::Font& font, 
             int font_size
         )
-        :   Text(
-                "",
-                font,
-                font_size
-            ), 
-            value(stringable_value)
+        :   sf::Text ("", font, font_size),
+            value ( stringable_value )
         {
             update();
         }
@@ -76,6 +71,15 @@ namespace entity
     private:
         T& value;
     }; 
+
+    struct CopyableTextContainer
+    {
+        std::vector<CopyableText<char>> type_char; 
+        std::vector<CopyableText<std::string>> type_string;
+
+        void updateAll();
+        void drawAll(sf::RenderWindow& target);
+    };
 }
 
 #endif
