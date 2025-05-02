@@ -62,6 +62,7 @@ int main()
          
         // Update
         all_buttons.checkForHover(mouse_pos);
+        texts.checkForHover(mouse_pos);
         texts.updateAll();
 
         // Draw

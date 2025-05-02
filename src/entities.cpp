@@ -78,6 +78,7 @@ void entity::ButtonContainer::checkForHover(const sf::Vector2f& mouse_pos)
     }
 }
 
+
 //===============================================================
 // struct CopyableTextContainer definitions
 //===============================================================
@@ -107,4 +108,10 @@ void entity::CopyableTextContainer::checkForPress(const sf::Vector2f& mouse_pos,
         if (s.getGlobalBounds().contains(mouse_pos) && event.mouseButton.button == sf::Mouse::Left)
             clipboard::copyStringToClipboard(s.getString(), owner_hwnd);
     }
+}   
+
+void entity::CopyableTextContainer::checkForHover(const sf::Vector2f& mouse_pos)
+{
+    for (auto& c : char_texts) { c.checkForHover(mouse_pos); }
+    for (auto& s : string_texts) { s.checkForHover(mouse_pos); }
 }   

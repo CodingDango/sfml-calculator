@@ -57,8 +57,10 @@ namespace entity
             const sf::Font& font, 
             int font_size
         )
-        :   sf::Text ("", font, font_size),
-            value ( stringable_value )
+        :   sf::Text        ("", font, font_size),
+            value           {stringable_value},
+            hover_color     {},
+            normal_color    { sf::Color::White } 
         {
             update();
         }
@@ -70,8 +72,28 @@ namespace entity
             setString(oss.str());
         }
 
+        void checkForHover(const sf::Vector2f& mouse_pos)
+        {
+            if (getGlobalBounds().contains(mouse_pos)) 
+                Text::setFillColor(hover_color);
+            else
+                Text::setFillColor(normal_color);
+        }
+
+        void setNormalFillColor(const sf::Color& color)
+        {
+            normal_color = color;
+        }
+
+        void setHoverColor(const sf::Color& color)
+        {
+            hover_color = color;
+        }
+        
     private:
         T& value;
+        sf::Color normal_color;
+        sf::Color hover_color;
     }; 
 
     struct CopyableTextContainer
@@ -82,6 +104,7 @@ namespace entity
         void updateAll();
         void drawAll(sf::RenderWindow& target);
         void checkForPress(const sf::Vector2f& mouse_pos, const sf::Event& event, HWND owner_hwnd);
+        void checkForHover(const sf::Vector2f& mouse_pos);
     };
 }
 

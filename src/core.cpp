@@ -94,17 +94,20 @@ void core::prepareCopyableTexts(entity::CopyableTextContainer& container, calc::
     entity::CopyableText input_text {calc_data.input, assets::my_font, 50};
     input_text.setStyle(sf::Text::Bold);
     input_text.setPosition(30, 125);
+    input_text.setHoverColor({166, 169, 225});
     container.string_texts.push_back(input_text);
 
     entity::CopyableText result_text {calc_data.result_string, assets::my_font, 40};
     result_text.setStyle(sf::Text::Bold);
-    result_text.setFillColor(sf::Color(148, 148, 148, 100));
+    result_text.setNormalFillColor({148, 148, 148});
+    result_text.setHoverColor({166, 169, 225});
     result_text.setPosition(30, 26);
     container.string_texts.push_back(result_text);
 
     entity::CopyableText operation_text {calc_data.operation, assets::my_font, 45};
     operation_text.setStyle(sf::Text::Bold);
-    operation_text.setFillColor(sf::Color(148, 148, 148, 100));
+    operation_text.setNormalFillColor({148, 148, 148});
+    operation_text.setHoverColor({166, 169, 225});
     operation_text.setPosition(535, 26);
     container.char_texts.push_back(operation_text);
 }

@@ -14,11 +14,11 @@ It's only for fun, even though the project idea is trivial
 Make sure you have SFML 2.6 Installed. Currently, 
 this only version only works on windows. (since of the clipboard logic).
 
-!IMPORTANT - Make sure you cd into build when compiling and run. The assets will not load if so.
+!IMPORTANT - When running the exe, make sure your running it outside the build folder, so the project folder
 
 1. Run `cmake ..` inside ./build folder.
 2. Run `ninja` inside the ./build folder.
-3. Run `./calculator` which is the program name/ 
+3. Run `./build/calculator.exe`
 
 # Usability Controls
 
