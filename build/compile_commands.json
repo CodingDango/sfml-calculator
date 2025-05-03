@@ -7,6 +7,12 @@
 },
 {
   "directory": "D:/Coding Programs/Code/C++/calculator/build",
+  "command": "\"D:\\Coding Programs\\MSYS\\mingw64\\bin\\g++.exe\"  @CMakeFiles/calculator.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\calculator.dir\\src\\application.cpp.obj -c \"D:\\Coding Programs\\Code\\C++\\calculator\\src\\application.cpp\"",
+  "file": "D:/Coding Programs/Code/C++/calculator/src/application.cpp",
+  "output": "CMakeFiles/calculator.dir/src/application.cpp.obj"
+},
+{
+  "directory": "D:/Coding Programs/Code/C++/calculator/build",
   "command": "\"D:\\Coding Programs\\MSYS\\mingw64\\bin\\g++.exe\"  @CMakeFiles/calculator.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\calculator.dir\\src\\entities.cpp.obj -c \"D:\\Coding Programs\\Code\\C++\\calculator\\src\\entities.cpp\"",
   "file": "D:/Coding Programs/Code/C++/calculator/src/entities.cpp",
   "output": "CMakeFiles/calculator.dir/src/entities.cpp.obj"
@@ -28,12 +34,6 @@
   "command": "\"D:\\Coding Programs\\MSYS\\mingw64\\bin\\g++.exe\"  @CMakeFiles/calculator.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\calculator.dir\\src\\calc.cpp.obj -c \"D:\\Coding Programs\\Code\\C++\\calculator\\src\\calc.cpp\"",
   "file": "D:/Coding Programs/Code/C++/calculator/src/calc.cpp",
   "output": "CMakeFiles/calculator.dir/src/calc.cpp.obj"
-},
-{
-  "directory": "D:/Coding Programs/Code/C++/calculator/build",
-  "command": "\"D:\\Coding Programs\\MSYS\\mingw64\\bin\\g++.exe\"  @CMakeFiles/calculator.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\calculator.dir\\src\\assets.cpp.obj -c \"D:\\Coding Programs\\Code\\C++\\calculator\\src\\assets.cpp\"",
-  "file": "D:/Coding Programs/Code/C++/calculator/src/assets.cpp",
-  "output": "CMakeFiles/calculator.dir/src/assets.cpp.obj"
 },
 {
   "directory": "D:/Coding Programs/Code/C++/calculator/build",

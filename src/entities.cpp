@@ -62,7 +62,7 @@ void entity::ButtonContainer::drawButtons(sf::RenderWindow& window)
     }
 }
 
-void entity::ButtonContainer::checkForClick(const sf::Vector2f& mouse_pos, const sf::Event& event)
+void entity::ButtonContainer::checkForPress(const sf::Vector2f& mouse_pos, const sf::Event& event)
 {
     for (auto& btn : *this)
     {

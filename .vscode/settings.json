@@ -111,6 +111,8 @@
     "cinttypes": "cpp",
     "typeinfo": "cpp",
     "variant": "cpp",
-    "iomanip": "cpp"
+    "iomanip": "cpp",
+    "codecvt": "cpp",
+    "cstdarg": "cpp"
   }
 }

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/calculator.dir/src/assets.cpp.obj"
-  "CMakeFiles/calculator.dir/src/assets.cpp.obj.d"
+  "CMakeFiles/calculator.dir/src/application.cpp.obj"
+  "CMakeFiles/calculator.dir/src/application.cpp.obj.d"
   "CMakeFiles/calculator.dir/src/calc.cpp.obj"
   "CMakeFiles/calculator.dir/src/calc.cpp.obj.d"
   "CMakeFiles/calculator.dir/src/clipboard.cpp.obj"

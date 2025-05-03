@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "D:/Coding Programs/Code/C++/calculator/src/assets.cpp" "CMakeFiles/calculator.dir/src/assets.cpp.obj" "gcc" "CMakeFiles/calculator.dir/src/assets.cpp.obj.d"
+  "D:/Coding Programs/Code/C++/calculator/src/application.cpp" "CMakeFiles/calculator.dir/src/application.cpp.obj" "gcc" "CMakeFiles/calculator.dir/src/application.cpp.obj.d"
   "D:/Coding Programs/Code/C++/calculator/src/calc.cpp" "CMakeFiles/calculator.dir/src/calc.cpp.obj" "gcc" "CMakeFiles/calculator.dir/src/calc.cpp.obj.d"
   "D:/Coding Programs/Code/C++/calculator/src/clipboard.cpp" "CMakeFiles/calculator.dir/src/clipboard.cpp.obj" "gcc" "CMakeFiles/calculator.dir/src/clipboard.cpp.obj.d"
   "D:/Coding Programs/Code/C++/calculator/src/core.cpp" "CMakeFiles/calculator.dir/src/core.cpp.obj" "gcc" "CMakeFiles/calculator.dir/src/core.cpp.obj.d"

@@ -1,6 +1,6 @@
-CMakeFiles/calculator.dir/src/core.cpp.obj: \
- D:\Coding\ Programs\Code\C++\calculator\src\core.cpp \
- D:/Coding\ Programs/Code/C++/calculator/includes/core.hpp \
+CMakeFiles/calculator.dir/src/application.cpp.obj: \
+ D:\Coding\ Programs\Code\C++\calculator\src\application.cpp \
+ D:/Coding\ Programs/Code/C++/calculator/includes/application.hpp \
  D:/Coding\ Programs/Code/C++/calculator/includes/assets.hpp \
  D:/Coding\ Programs/Code/C++/calculator/includes/utils.hpp \
  D:/Coding\ Programs/MSYS/mingw64/include/SFML/Graphics.hpp \
@@ -259,6 +259,7 @@ CMakeFiles/calculator.dir/src/core.cpp.obj: \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/istream.tcc \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/sstream \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/sstream.tcc \
+ D:/Coding\ Programs/Code/C++/calculator/includes/core.hpp \
  D:/Coding\ Programs/Code/C++/calculator/includes/calc.hpp \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/iomanip \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/quoted_string.h \
@@ -464,4 +465,5 @@ CMakeFiles/calculator.dir/src/core.cpp.obj: \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/hashtable_policy.h \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/array \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/compare
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/compare \
+ D:/Coding\ Programs/Code/C++/calculator/includes/input.hpp

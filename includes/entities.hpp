@@ -39,7 +39,7 @@ namespace entity
     struct ButtonContainer : public std::vector<Button>
     {   
         void drawButtons(sf::RenderWindow& window);
-        void checkForClick(const sf::Vector2f& mouse_pos, const sf::Event& event);
+        void checkForPress(const sf::Vector2f& mouse_pos, const sf::Event& event);
         void checkForHover(const sf::Vector2f& mouse_pos);
     };
 

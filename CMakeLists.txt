@@ -31,11 +31,11 @@ find_package(SFML 2.5 REQUIRED COMPONENTS system window graphics) # Add audio ne
 add_executable(
   calculator 
   ./src/main.cpp 
+  ./src/application.cpp
   ./src/entities.cpp 
   ./src/utils.cpp 
   ./src/core.cpp 
   ./src/calc.cpp 
-  ./src/assets.cpp
   ./src/input.cpp
   ./src/clipboard.cpp
 ) 

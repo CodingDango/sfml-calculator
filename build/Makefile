@@ -128,29 +128,29 @@ calculator/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\calculator.dir\build.make CMakeFiles/calculator.dir/build
 .PHONY : calculator/fast
 
-src/assets.obj: src/assets.cpp.obj
-.PHONY : src/assets.obj
+src/application.obj: src/application.cpp.obj
+.PHONY : src/application.obj
 
 # target to build an object file
-src/assets.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\calculator.dir\build.make CMakeFiles/calculator.dir/src/assets.cpp.obj
-.PHONY : src/assets.cpp.obj
+src/application.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\calculator.dir\build.make CMakeFiles/calculator.dir/src/application.cpp.obj
+.PHONY : src/application.cpp.obj
 
-src/assets.i: src/assets.cpp.i
-.PHONY : src/assets.i
+src/application.i: src/application.cpp.i
+.PHONY : src/application.i
 
 # target to preprocess a source file
-src/assets.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\calculator.dir\build.make CMakeFiles/calculator.dir/src/assets.cpp.i
-.PHONY : src/assets.cpp.i
+src/application.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\calculator.dir\build.make CMakeFiles/calculator.dir/src/application.cpp.i
+.PHONY : src/application.cpp.i
 
-src/assets.s: src/assets.cpp.s
-.PHONY : src/assets.s
+src/application.s: src/application.cpp.s
+.PHONY : src/application.s
 
 # target to generate assembly for a file
-src/assets.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\calculator.dir\build.make CMakeFiles/calculator.dir/src/assets.cpp.s
-.PHONY : src/assets.cpp.s
+src/application.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\calculator.dir\build.make CMakeFiles/calculator.dir/src/application.cpp.s
+.PHONY : src/application.cpp.s
 
 src/calc.obj: src/calc.cpp.obj
 .PHONY : src/calc.obj
@@ -329,9 +329,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... calculator
-	@echo ... src/assets.obj
-	@echo ... src/assets.i
-	@echo ... src/assets.s
+	@echo ... src/application.obj
+	@echo ... src/application.i
+	@echo ... src/application.s
 	@echo ... src/calc.obj
 	@echo ... src/calc.i
 	@echo ... src/calc.s
