@@ -114,7 +114,7 @@ bool entity::CopyableTextContainer::checkForPress(const sf::Vector2f& mouse_pos,
         {
             clipboard::copyStringToClipboard(s.getString(), owner_hwnd);
             has_text_been_clicked = true;
-        }
+        } 
     }
     
     return has_text_been_clicked;

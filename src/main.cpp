@@ -9,40 +9,38 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-const int WINDOW_WIDTH_PX = 600;
-const int WINDOW_HEIGHT_PX = 800;
-const sf::Color background_color {17, 17, 17};
-
 int main()
-{
-    sf::RenderWindow window {
-        sf::VideoMode({WINDOW_WIDTH_PX, WINDOW_HEIGHT_PX}), 
-        "Calculator"
-    };
+{   
+    const int window_width_px = 600;
+    const int window_height_px = 800;
+    const sf::Color bg_color {17, 17, 17};
+
+    sf::RenderWindow window {sf::VideoMode({window_width_px, window_height_px}), "Calculator"};
     window.setFramerateLimit(60);
 
     sf::Clock clock;
 
     // For clipboard
     HWND hwnd = static_cast<HWND>(window.getSystemHandle());
-
+    
     // Core prep for buttons
     calc::CalculatorOperationContainer calc_data {};
-    entity::ButtonContainer all_buttons {};
+    entity::ButtonContainer all_buttons          {};
+    
     core::prepareButtons(all_buttons, calc_data);
     
     // Prepare the text boxes
     entity::CopyableTextContainer texts {};
     core::prepareCopyableTexts(texts, calc_data);
 
-    // Copy notification
+    // Copy notification sprite
     sf::Sprite copy_notification {assets::texture_copy_notification};
     copy_notification.setColor(utils::modifyColorOpacity(copy_notification.getColor(), 0));
     copy_notification.setPosition(350, 26);
     
     while (window.isOpen())
     {
-        float delta_time = clock.restart().asSeconds();
+        float delta_time =      clock.restart().asSeconds();
         sf::Vector2f mouse_pos (sf::Mouse::getPosition(window));
         sf::Event event;
 
@@ -55,9 +53,10 @@ int main()
                 break;
 
             case (sf::Event::MouseButtonPressed):
-                all_buttons.checkForClick(mouse_pos, event);
 
-                // If copied to clipboard, show.
+                all_buttons.checkForClick(mouse_pos, event);
+                
+                // evals to true if user clicked on a copyable text, which copies to the clipboard
                 if (texts.checkForPress(mouse_pos, event, hwnd))
                     copy_notification.setColor(utils::modifyColorOpacity(copy_notification.getColor(), 255));
                     
@@ -78,11 +77,12 @@ int main()
         texts.checkForHover(mouse_pos);
         texts.updateAll();
 
+        // Update copy notification (lowers the opacity overtime)
         double new_opacity = copy_notification.getColor().a - (100 * delta_time);
         copy_notification.setColor(utils::modifyColorOpacity(copy_notification.getColor(), new_opacity));
         
         // Draw
-        window.clear(background_color);
+        window.clear(bg_color);
         all_buttons.drawButtons(window);
         texts.drawAll(window);
         window.draw(copy_notification);

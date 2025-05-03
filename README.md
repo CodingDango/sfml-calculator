@@ -39,9 +39,17 @@ this only version only works on windows. (since of the clipboard logic).
     - Just click on the texts (which aren't buttons) and it will be copied onto the clipboard.
 
 ## Requirements
+- ❌ Texts shouldn't overflow, they should have a limit.
 - ✅ Notifies the user they copied something.
 - ✅ Texts that can be copied glow a light purple for interactivity.
 - ✅ Feature to copy either the results text, or the input text to the os clipboard, through right clicking.
 - ✅ Implement key inputs for user experience. CTRL-C to clear, press numbers, periods, etc.
 - ✅ Buttons darken on hover.
 - ✅ UI Looks decent.. not horrible.
+
+# Changes to be made
+1. Clean up the main function (Encapsulate It) 
+2. Changes to the notification sprite.
+  - the position of the notification png, should be below the operator character. not left to it.
+  - The design, make it more horizontal
+3. Create a base pure base class UIEntity, since currently all entities require hovering, clicking, and updating.
