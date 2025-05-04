@@ -3,7 +3,9 @@
 Application::Application()
 :   m_window { sf::VideoMode(WINDOW_WIDTH_PX, WINDOW_HEIGHT_PX), "Calculator" },
     m_hwnd { static_cast<HWND>(m_window.getSystemHandle()) }
-{}
+{
+    m_window.setFramerateLimit(60);
+}
 
 void Application::runApp()
 {

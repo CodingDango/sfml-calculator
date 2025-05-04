@@ -48,8 +48,8 @@ this only version only works on windows. (since of the clipboard logic).
 - ✅ UI Looks decent.. not horrible.
 
 # Changes to be made
-1. Clean up the main function (Encapsulate It) 
-2. Changes to the notification sprite.
+1. (!DONE) Clean up the main function (Encapsulate It) 
+2. (Not Yet) Changes to the notification sprite.
   - the position of the notification png, should be below the operator character. not left to it.
   - The design, make it more horizontal
-3. Create a base pure base class UIEntity, since currently all entities require hovering, clicking, and updating.
+3. (Not Yet) Create a base pure base class UIEntity, since currently all entities require hovering, clicking, and updating.
