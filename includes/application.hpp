@@ -2,7 +2,7 @@
 #include "core.hpp"
 #include "calc.hpp"
 #include "clipboard.hpp"
-#include "entities.hpp"
+#include "ui_elements.hpp"
 #include "input.hpp"
 #include "utils.hpp"
 
@@ -30,8 +30,8 @@ private:
 
     // Application State And Data
     calc::CalculatorOperationContainer m_calc_operation; 
-    entity::ButtonContainer m_button_container;          
-    entity::CopyableTextContainer m_copyable_text_container; 
+    ui::ButtonContainer m_button_container;          
+    ui::CopyableTextContainer m_copyable_text_container; 
     
     // UI Sprites
     sf::Sprite m_copy_notification;

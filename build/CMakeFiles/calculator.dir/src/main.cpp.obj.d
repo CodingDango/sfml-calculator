@@ -263,7 +263,7 @@ CMakeFiles/calculator.dir/src/main.cpp.obj: \
  D:/Coding\ Programs/Code/C++/calculator/includes/calc.hpp \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/iomanip \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/quoted_string.h \
- D:/Coding\ Programs/Code/C++/calculator/includes/entities.hpp \
+ D:/Coding\ Programs/Code/C++/calculator/includes/ui_elements.hpp \
  D:/Coding\ Programs/Code/C++/calculator/includes/clipboard.hpp \
  D:/Coding\ Programs/MSYS/mingw64/include/windows.h \
  D:/Coding\ Programs/MSYS/mingw64/include/sdkddkver.h \

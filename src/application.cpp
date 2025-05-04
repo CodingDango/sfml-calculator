@@ -34,6 +34,7 @@ void Application::processEvents()
 {
     sf::Vector2f mouse_pos ( sf::Mouse::getPosition(m_window) );
     sf::Event event;
+    static int counter {};
 
     while (m_window.pollEvent(event)) 
     {   
@@ -55,6 +56,7 @@ void Application::processEvents()
 
         case (sf::Event::TextEntered):
             input::handleTextEntered(m_calc_operation, event);
+            std::cout << ++counter << '\n';
             break;
 
         case (sf::Event::KeyPressed):
@@ -82,7 +84,7 @@ void Application::drawSprites()
 {
     m_window.clear(BG_COLOR);
     m_button_container.drawButtons(m_window);
-    m_copyable_text_container.drawAll(m_window);
+    m_copyable_text_container.drawTexts(m_window);
     m_window.draw(m_copy_notification);
     m_window.display();
 }

@@ -1,10 +1,10 @@
-#include "entities.hpp"
+#include "ui_elements.hpp"
 
 //===============================================================
 // class Button Public Methods
 //===============================================================
 
-entity::Button::Button(std::function<void()> c_callback)
+ui::Button::Button(std::function<void()> c_callback)
 :
     Sprite(),
     click_callback(c_callback)
@@ -13,7 +13,7 @@ entity::Button::Button(std::function<void()> c_callback)
     hover_color = utils::modifyColorByFactor(getColor(), 0.8);
 }
 
-entity::Button::Button()
+ui::Button::Button()
 :
     Sprite(),
     click_callback()
@@ -22,7 +22,7 @@ entity::Button::Button()
     hover_color = utils::modifyColorByFactor(getColor(), 0.8);
 }
 
-void entity::Button::handleHover(const sf::Vector2f& mouse_pos)
+void ui::Button::handleHover(const sf::Vector2f& mouse_pos)
 {
     if (getGlobalBounds().contains(mouse_pos))
         setColor(hover_color);
@@ -30,7 +30,7 @@ void entity::Button::handleHover(const sf::Vector2f& mouse_pos)
         setColor(normal_color);
 }
 
-void entity::Button::handleClick(const sf::Vector2f& mouse_pos, const sf::Event& event)
+void ui::Button::handleClick(const sf::Vector2f& mouse_pos, const sf::Event& event)
 {   
     if (
         getGlobalBounds().contains(mouse_pos)
@@ -44,7 +44,7 @@ void entity::Button::handleClick(const sf::Vector2f& mouse_pos, const sf::Event&
         setColor(normal_color);
 }
 
-void entity::Button::setClickCallback(std::function<void()> c_callback)
+void ui::Button::setClickCallback(std::function<void()> c_callback)
 {
     click_callback = c_callback;
 }
@@ -54,28 +54,48 @@ void entity::Button::setClickCallback(std::function<void()> c_callback)
 // struct ButtonContainer Public Methods
 //===============================================================
 
-void entity::ButtonContainer::drawButtons(sf::RenderWindow& window)
+void ui::ButtonContainer::addButton(const Button& btn)
 {
-    for (auto& btn : *this)
+    m_buttons.push_back(btn);
+}
+
+void ui::ButtonContainer::drawButtons(sf::RenderWindow& window)
+{
+    for (auto& btn : m_buttons)
     {
         window.draw(btn);
     }
 }
 
-void entity::ButtonContainer::checkForPress(const sf::Vector2f& mouse_pos, const sf::Event& event)
+void ui::ButtonContainer::checkForPress(const sf::Vector2f& mouse_pos, const sf::Event& event)
 {
-    for (auto& btn : *this)
+    for (auto& btn : m_buttons)
     {
         btn.handleClick(mouse_pos, event);
     }
 }
 
-void entity::ButtonContainer::checkForHover(const sf::Vector2f& mouse_pos)
+void ui::ButtonContainer::checkForHover(const sf::Vector2f& mouse_pos)
 {
-    for (auto& btn : *this)
+    for (auto& btn : m_buttons)
     {
         btn.handleHover(mouse_pos);
     }
+}
+
+std::vector<ui::Button>::const_iterator ui::ButtonContainer::begin() const 
+{
+    return m_buttons.begin();
+}
+
+std::vector<ui::Button>::const_iterator ui::ButtonContainer::end() const
+{
+    return m_buttons.end();
+}
+
+std::vector<ui::Button>::const_reference ui::ButtonContainer::back() const
+{
+    return m_buttons.back();
 }
 
 
@@ -83,19 +103,19 @@ void entity::ButtonContainer::checkForHover(const sf::Vector2f& mouse_pos)
 // struct CopyableTextContainer definitions
 //===============================================================
 
-void entity::CopyableTextContainer::updateAll()
+void ui::CopyableTextContainer::updateAll()
 {
     for (auto& c : char_texts) { c.update(); }
     for (auto& s : string_texts) { s.update(); } 
 }
 
-void entity::CopyableTextContainer::drawAll(sf::RenderWindow& target)
+void ui::CopyableTextContainer::drawTexts(sf::RenderWindow& target)
 {
     for (auto& c : char_texts) { target.draw(c); }
     for (auto& s : string_texts) { target.draw(s); }
 }
 
-bool entity::CopyableTextContainer::checkForPress(const sf::Vector2f& mouse_pos, const sf::Event& event, HWND owner_hwnd)
+bool ui::CopyableTextContainer::checkForPress(const sf::Vector2f& mouse_pos, const sf::Event& event, HWND owner_hwnd)
 {
     bool has_text_been_clicked = false;
 
@@ -120,7 +140,7 @@ bool entity::CopyableTextContainer::checkForPress(const sf::Vector2f& mouse_pos,
     return has_text_been_clicked;
 }   
 
-void entity::CopyableTextContainer::checkForHover(const sf::Vector2f& mouse_pos)
+void ui::CopyableTextContainer::checkForHover(const sf::Vector2f& mouse_pos)
 {
     for (auto& c : char_texts) { c.checkForHover(mouse_pos); }
     for (auto& s : string_texts) { s.checkForHover(mouse_pos); }

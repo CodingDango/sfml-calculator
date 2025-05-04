@@ -224,30 +224,6 @@ src/core.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\calculator.dir\build.make CMakeFiles/calculator.dir/src/core.cpp.s
 .PHONY : src/core.cpp.s
 
-src/entities.obj: src/entities.cpp.obj
-.PHONY : src/entities.obj
-
-# target to build an object file
-src/entities.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\calculator.dir\build.make CMakeFiles/calculator.dir/src/entities.cpp.obj
-.PHONY : src/entities.cpp.obj
-
-src/entities.i: src/entities.cpp.i
-.PHONY : src/entities.i
-
-# target to preprocess a source file
-src/entities.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\calculator.dir\build.make CMakeFiles/calculator.dir/src/entities.cpp.i
-.PHONY : src/entities.cpp.i
-
-src/entities.s: src/entities.cpp.s
-.PHONY : src/entities.s
-
-# target to generate assembly for a file
-src/entities.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\calculator.dir\build.make CMakeFiles/calculator.dir/src/entities.cpp.s
-.PHONY : src/entities.cpp.s
-
 src/input.obj: src/input.cpp.obj
 .PHONY : src/input.obj
 
@@ -296,6 +272,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\calculator.dir\build.make CMakeFiles/calculator.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/ui_elements.obj: src/ui_elements.cpp.obj
+.PHONY : src/ui_elements.obj
+
+# target to build an object file
+src/ui_elements.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\calculator.dir\build.make CMakeFiles/calculator.dir/src/ui_elements.cpp.obj
+.PHONY : src/ui_elements.cpp.obj
+
+src/ui_elements.i: src/ui_elements.cpp.i
+.PHONY : src/ui_elements.i
+
+# target to preprocess a source file
+src/ui_elements.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\calculator.dir\build.make CMakeFiles/calculator.dir/src/ui_elements.cpp.i
+.PHONY : src/ui_elements.cpp.i
+
+src/ui_elements.s: src/ui_elements.cpp.s
+.PHONY : src/ui_elements.s
+
+# target to generate assembly for a file
+src/ui_elements.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\calculator.dir\build.make CMakeFiles/calculator.dir/src/ui_elements.cpp.s
+.PHONY : src/ui_elements.cpp.s
+
 src/utils.obj: src/utils.cpp.obj
 .PHONY : src/utils.obj
 
@@ -341,15 +341,15 @@ help:
 	@echo ... src/core.obj
 	@echo ... src/core.i
 	@echo ... src/core.s
-	@echo ... src/entities.obj
-	@echo ... src/entities.i
-	@echo ... src/entities.s
 	@echo ... src/input.obj
 	@echo ... src/input.i
 	@echo ... src/input.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/ui_elements.obj
+	@echo ... src/ui_elements.i
+	@echo ... src/ui_elements.s
 	@echo ... src/utils.obj
 	@echo ... src/utils.i
 	@echo ... src/utils.s

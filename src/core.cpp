@@ -5,7 +5,7 @@
 //===============================================================
 
 void core::prepareButtons(
-  entity::ButtonContainer& container, 
+  ui::ButtonContainer& container, 
   calc::CalculatorOperationContainer& calc_data
 )
 {
@@ -26,10 +26,10 @@ void core::prepareButtons(
       if (i == 0)
       {
           BUTTON_COUNTER += 2;
-          entity::Button clear_button { [&calc_data](){ calc_data.clear(); } };
+          ui::Button clear_button { [&calc_data](){ calc_data.clear(); } };
           clear_button.setTexture(btn_initializer.texture);
           clear_button.setPosition(STARTING_POINT);
-          container.push_back(clear_button);
+          container.addButton(clear_button);
           continue;
       } else 
           BUTTON_COUNTER++;
@@ -47,16 +47,16 @@ void core::prepareButtons(
       }
 
       // Add button functionality
-      entity::Button button;
+      ui::Button button;
       addButtonFunction(button, btn_initializer, calc_data);
       button.setTexture(btn_initializer.texture);
       button.setPosition({X, Y});
-      container.push_back(button);
+      container.addButton(button);
   }
 }
 
 void core::addButtonFunction(
-  entity::Button& btn, 
+  ui::Button& btn, 
   const assets::ButtonInitializerData& initializer,
   calc::CalculatorOperationContainer& calc_data
 )
@@ -89,22 +89,22 @@ void core::addButtonFunction(
   }
 }
 
-void core::prepareCopyableTexts(entity::CopyableTextContainer& container, calc::CalculatorOperationContainer& calc_data)
+void core::prepareCopyableTexts(ui::CopyableTextContainer& container, calc::CalculatorOperationContainer& calc_data)
 {  
-    entity::CopyableText input_text {calc_data.input, assets::my_font, 50};
+    ui::CopyableText input_text {calc_data.input, assets::my_font, 50};
     input_text.setStyle(sf::Text::Bold);
     input_text.setPosition(20, 125);
     input_text.setHoverColor({166, 169, 225});
     container.string_texts.push_back(input_text);
 
-    entity::CopyableText result_text {calc_data.result_string, assets::my_font, 40};
+    ui::CopyableText result_text {calc_data.result_string, assets::my_font, 40};
     result_text.setStyle(sf::Text::Bold);
     result_text.setNormalFillColor({148, 148, 148});
     result_text.setHoverColor({166, 169, 225});
     result_text.setPosition(20, 23.077);
     container.string_texts.push_back(result_text);
 
-    entity::CopyableText operation_text {calc_data.operation, assets::my_font, 45};
+    ui::CopyableText operation_text {calc_data.operation, assets::my_font, 45};
     operation_text.setStyle(sf::Text::Bold);
     operation_text.setNormalFillColor({148, 148, 148});
     operation_text.setHoverColor({166, 169, 225});

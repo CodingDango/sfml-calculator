@@ -12,9 +12,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/Coding Programs/Code/C++/calculator/src/calc.cpp" "CMakeFiles/calculator.dir/src/calc.cpp.obj" "gcc" "CMakeFiles/calculator.dir/src/calc.cpp.obj.d"
   "D:/Coding Programs/Code/C++/calculator/src/clipboard.cpp" "CMakeFiles/calculator.dir/src/clipboard.cpp.obj" "gcc" "CMakeFiles/calculator.dir/src/clipboard.cpp.obj.d"
   "D:/Coding Programs/Code/C++/calculator/src/core.cpp" "CMakeFiles/calculator.dir/src/core.cpp.obj" "gcc" "CMakeFiles/calculator.dir/src/core.cpp.obj.d"
-  "D:/Coding Programs/Code/C++/calculator/src/entities.cpp" "CMakeFiles/calculator.dir/src/entities.cpp.obj" "gcc" "CMakeFiles/calculator.dir/src/entities.cpp.obj.d"
   "D:/Coding Programs/Code/C++/calculator/src/input.cpp" "CMakeFiles/calculator.dir/src/input.cpp.obj" "gcc" "CMakeFiles/calculator.dir/src/input.cpp.obj.d"
   "D:/Coding Programs/Code/C++/calculator/src/main.cpp" "CMakeFiles/calculator.dir/src/main.cpp.obj" "gcc" "CMakeFiles/calculator.dir/src/main.cpp.obj.d"
+  "D:/Coding Programs/Code/C++/calculator/src/ui_elements.cpp" "CMakeFiles/calculator.dir/src/ui_elements.cpp.obj" "gcc" "CMakeFiles/calculator.dir/src/ui_elements.cpp.obj.d"
   "D:/Coding Programs/Code/C++/calculator/src/utils.cpp" "CMakeFiles/calculator.dir/src/utils.cpp.obj" "gcc" "CMakeFiles/calculator.dir/src/utils.cpp.obj.d"
   )
 

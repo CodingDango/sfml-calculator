@@ -1,5 +1,5 @@
-CMakeFiles/calculator.dir/src/entities.cpp.obj: \
- D:\Coding\ Programs\Code\C++\calculator\src\entities.cpp \
+CMakeFiles/calculator.dir/src/ui_elements.cpp.obj: \
+ D:\Coding\ Programs\Code\C++\calculator\src\ui_elements.cpp \
  D:/Coding\ Programs/Code/C++/calculator/includes/ui_elements.hpp \
  D:/Coding\ Programs/Code/C++/calculator/includes/clipboard.hpp \
  D:/Coding\ Programs/MSYS/mingw64/include/windows.h \

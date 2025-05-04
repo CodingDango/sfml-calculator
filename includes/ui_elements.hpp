@@ -18,7 +18,7 @@ namespace utils
 // Button related declarations
 //===============================================================
 
-namespace entity 
+namespace ui 
 {
     class Button : public sf::Sprite
     {   
@@ -36,11 +36,20 @@ namespace entity
         sf::Color normal_color;
     };
 
-    struct ButtonContainer : public std::vector<Button>
+    class ButtonContainer
     {   
+    public:
+        void addButton(const Button& btn);
         void drawButtons(sf::RenderWindow& window);
         void checkForPress(const sf::Vector2f& mouse_pos, const sf::Event& event);
         void checkForHover(const sf::Vector2f& mouse_pos);
+        
+        std::vector<Button>::const_iterator begin() const;
+        std::vector<Button>::const_iterator end() const;
+        std::vector<Button>::const_reference back() const;
+
+    private:
+        std::vector<Button> m_buttons;
     };
 
 
@@ -102,7 +111,7 @@ namespace entity
         std::vector<CopyableText<std::string>> string_texts;
 
         void updateAll();
-        void drawAll(sf::RenderWindow& target);
+        void drawTexts(sf::RenderWindow& target);
         bool checkForPress(const sf::Vector2f& mouse_pos, const sf::Event& event, HWND owner_hwnd);
         void checkForHover(const sf::Vector2f& mouse_pos);
     };

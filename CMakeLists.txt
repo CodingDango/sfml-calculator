@@ -32,7 +32,7 @@ add_executable(
   calculator 
   ./src/main.cpp 
   ./src/application.cpp
-  ./src/entities.cpp 
+  ./src/ui_elements.cpp 
   ./src/utils.cpp 
   ./src/core.cpp 
   ./src/calc.cpp 
