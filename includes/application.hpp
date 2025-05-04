@@ -21,7 +21,7 @@ private:
 
     static inline sf::Color BG_COLOR                          { 17, 17, 17 };     
     static constexpr double NOTIFICATION_FADE_SPEED_FACTOR    { 100 };    
-    static inline sf::Vector2f NOTIFICATION_POSITION          { 537.291, 73.584 };
+    static inline sf::Vector2f NOTIFICATION_POSITION          { 530, 100 };
     
     // System
     sf::RenderWindow m_window; 
