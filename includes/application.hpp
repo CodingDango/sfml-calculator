@@ -16,29 +16,29 @@ public:
 
 private:
     // Config
-    static constexpr int WINDOW_WIDTH_PX     { 600 };    
-    static constexpr int WINDOW_HEIGHT_PX    { 800 };   
+    inline static const int WINDOW_WIDTH_PX    { 600 };    
+    inline static const int WINDOW_HEIGHT_PX   { 800 };   
 
-    static inline sf::Color BG_COLOR                          { 17, 17, 17 };     
-    static constexpr double NOTIFICATION_FADE_SPEED_FACTOR    { 100 };    
-    static inline sf::Vector2f NOTIFICATION_POSITION          { 530, 100 };
+    inline static const sf::Color BG_COLOR                     { 17, 17, 17 };     
+    inline static const double NOTIFICATION_FADE_SPEED_FACTOR  { 100 };    
+    inline static const sf::Vector2f NOTIFICATION_POSITION     { 530, 100 };
     
     // System
     sf::RenderWindow m_window; 
     sf::Clock m_clock;
-    HWND m_hwnd;
+    HWND m_hwnd;                // For Windows specific clipboard operations
 
     // Application State And Data
     calc::CalculatorOperationContainer m_calc_operation; 
     ui::ButtonContainer m_button_container;          
     ui::CopyableTextContainer m_copyable_text_container; 
     
-    // UI Sprites
+    // Unique UI Sprites
     sf::Sprite m_copy_notification;
 
     // Methods
     void prepareUISprites();
     void processEvents();
-    void updateSprites();
-    void drawSprites();
+    void updateUISprites();
+    void drawUISprites();
 };

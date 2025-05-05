@@ -348,6 +348,7 @@ CMakeFiles/calculator.dir/src/ui_elements.cpp.obj: \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/messages_members.h \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/locale_conv.h \
+ D:/Coding\ Programs/Code/C++/calculator/includes/utils.hpp \
  D:/Coding\ Programs/MSYS/mingw64/include/SFML/Graphics.hpp \
  D:/Coding\ Programs/MSYS/mingw64/include/SFML/Window.hpp \
  D:/Coding\ Programs/MSYS/mingw64/include/SFML/System.hpp \
@@ -448,6 +449,8 @@ CMakeFiles/calculator.dir/src/ui_elements.cpp.obj: \
  D:/Coding\ Programs/MSYS/mingw64/include/SFML/Graphics/Sprite.hpp \
  D:/Coding\ Programs/MSYS/mingw64/include/SFML/Graphics/Text.hpp \
  D:/Coding\ Programs/MSYS/mingw64/include/SFML/Graphics/VertexBuffer.hpp \
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/sstream \
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/sstream.tcc \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/functional \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/std_function.h \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/unordered_map \
@@ -456,6 +459,4 @@ CMakeFiles/calculator.dir/src/ui_elements.cpp.obj: \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/hashtable_policy.h \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/array \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/compare \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/sstream \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/sstream.tcc
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/compare

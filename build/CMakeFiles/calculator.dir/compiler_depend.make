@@ -2125,6 +2125,7 @@ CMakeFiles/calculator.dir/src/main.cpp.obj: D:/Coding\ Programs/Code/C++/calcula
 CMakeFiles/calculator.dir/src/ui_elements.cpp.obj: D:/Coding\ Programs/Code/C++/calculator/src/ui_elements.cpp \
   D:/Coding\ Programs/Code/C++/calculator/includes/clipboard.hpp \
   D:/Coding\ Programs/Code/C++/calculator/includes/ui_elements.hpp \
+  D:/Coding\ Programs/Code/C++/calculator/includes/utils.hpp \
   D:/Coding\ Programs/MSYS/mingw64/include/SFML/Config.hpp \
   D:/Coding\ Programs/MSYS/mingw64/include/SFML/Graphics.hpp \
   D:/Coding\ Programs/MSYS/mingw64/include/SFML/Graphics/BlendMode.hpp \

@@ -12,6 +12,7 @@ namespace utils
     sf::Color modifyColorByFactor(sf::Color color, float factor);
     sf::Font loadFont(const std::string& path);
     sf::Color modifyColorOpacity(sf::Color color, double value);
+    std::string format_number(const std::string& str);
 }
 
 #endif

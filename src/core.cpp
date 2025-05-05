@@ -26,7 +26,7 @@ void core::prepareButtons(
       if (i == 0)
       {
           BUTTON_COUNTER += 2;
-          ui::Button clear_button { [&calc_data](){ calc_data.clear(); } };
+          ui::Button clear_button { [&calc_data](){ calc_data.reset(); } };
           clear_button.setTexture(btn_initializer.texture);
           clear_button.setPosition(STARTING_POINT);
           container.addButton(clear_button);
@@ -91,23 +91,44 @@ void core::addButtonFunction(
 
 void core::prepareCopyableTexts(ui::CopyableTextContainer& container, calc::CalculatorOperationContainer& calc_data)
 {  
-    ui::CopyableText input_text {calc_data.input, assets::my_font, 50};
-    input_text.setStyle(sf::Text::Bold);
-    input_text.setPosition(20, 125);
-    input_text.setHoverColor({166, 169, 225});
-    container.string_texts.push_back(input_text);
+    ui::CopyableText input_text {
+        calc_data.input, 
+        assets::my_font,
+        core::INPUT_TEXT_FONT_SIZE,
+        core::TEXT_CHAR_LIMIT,
+        true
+    };
 
-    ui::CopyableText result_text {calc_data.result_string, assets::my_font, 40};
-    result_text.setStyle(sf::Text::Bold);
-    result_text.setNormalFillColor({148, 148, 148});
-    result_text.setHoverColor({166, 169, 225});
-    result_text.setPosition(20, 23.077);
-    container.string_texts.push_back(result_text);
+    input_text.setStyle(core::TEXT_STYLE);
+    input_text.setPosition(core::INPUT_TEXT_POSITION);
+    input_text.setHoverColor(core::TEXT_HOVER_FILL_COLOR);
+    container.m_string_texts.push_back(input_text);
 
-    ui::CopyableText operation_text {calc_data.operation, assets::my_font, 45};
-    operation_text.setStyle(sf::Text::Bold);
-    operation_text.setNormalFillColor({148, 148, 148});
-    operation_text.setHoverColor({166, 169, 225});
-    operation_text.setPosition(535, 18);
-    container.char_texts.push_back(operation_text);
+    ui::CopyableText result_text {
+        calc_data.result_string, 
+        assets::my_font, 
+        core::RESULT_TEXT_FONT_SIZE,
+        core::TEXT_CHAR_LIMIT,
+        true
+    };
+
+    result_text.setStyle(core::TEXT_STYLE);
+    result_text.setNormalFillColor(core::RESULT_TEXT_FILL_COLOR);
+    result_text.setHoverColor(core::TEXT_HOVER_FILL_COLOR);
+    result_text.setPosition(core::RESULT_TEXT_POSITION);
+    container.m_string_texts.push_back(result_text);
+
+    ui::CopyableText operation_text {
+        calc_data.operation, 
+        assets::my_font, 
+        core::OPERATION_TEXT_FONT_SIZE,
+        core::TEXT_CHAR_LIMIT,
+        false
+    };
+
+    operation_text.setStyle(core::TEXT_STYLE);
+    operation_text.setNormalFillColor(core::OPERATION_TEXT_FILL_COLOR);
+    operation_text.setHoverColor(core::TEXT_HOVER_FILL_COLOR);
+    operation_text.setPosition(core::OPERATION_TEXT_POSITION);
+    container.m_char_texts.push_back(operation_text);
 } 

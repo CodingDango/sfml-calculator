@@ -48,8 +48,7 @@ void input::handleTextEntered(
 {
     if (isdigit(event.text.unicode) || event.text.unicode == '.')
     {
-        char character = event.text.unicode;
-        calc_data.add_digit(character);
+        calc_data.add_digit(event.text.unicode);
         return;
     }
 

@@ -4,49 +4,42 @@
 // class Button Public Methods
 //===============================================================
 
-ui::Button::Button(std::function<void()> c_callback)
+ui::Button::Button(std::function<void()> callback)
 :
-    Sprite(),
-    click_callback(c_callback)
-{
-    normal_color = getColor();
-    hover_color = utils::modifyColorByFactor(getColor(), 0.8);
-}
+    Sprite              {},
+    m_click_callback    { callback },
+    m_normal_color      { getColor() },
+    m_hover_color       { utils::modifyColorByFactor(getColor(), 0.8) }
+{}
 
 ui::Button::Button()
 :
-    Sprite(),
-    click_callback()
-{
-    normal_color = getColor();
-    hover_color = utils::modifyColorByFactor(getColor(), 0.8);
-}
+    Sprite              {}, 
+    m_click_callback    {},
+    m_normal_color      { getColor() },
+    m_hover_color       { utils::modifyColorByFactor(getColor(), 0.8) }
+{}
 
 void ui::Button::handleHover(const sf::Vector2f& mouse_pos)
 {
     if (getGlobalBounds().contains(mouse_pos))
-        setColor(hover_color);
+        setColor(m_hover_color);
     else
-        setColor(normal_color);
+        setColor(m_normal_color);
 }
 
 void ui::Button::handleClick(const sf::Vector2f& mouse_pos, const sf::Event& event)
 {   
-    if (
-        getGlobalBounds().contains(mouse_pos)
-        && event.mouseButton.button == sf::Mouse::Button::Left
-    )
+    if (getGlobalBounds().contains(mouse_pos)
+        && event.mouseButton.button == sf::Mouse::Button::Left)
     {
-        click_callback();
+        m_click_callback();
     }
-
-    else
-        setColor(normal_color);
 }
 
-void ui::Button::setClickCallback(std::function<void()> c_callback)
+void ui::Button::setClickCallback(std::function<void()> callback)
 {
-    click_callback = c_callback;
+    m_click_callback = callback;
 }
 
 
@@ -105,21 +98,21 @@ std::vector<ui::Button>::const_reference ui::ButtonContainer::back() const
 
 void ui::CopyableTextContainer::updateAll()
 {
-    for (auto& c : char_texts) { c.update(); }
-    for (auto& s : string_texts) { s.update(); } 
+    for (auto& c : m_char_texts) { c.update(); }
+    for (auto& s : m_string_texts) { s.update(); } 
 }
 
 void ui::CopyableTextContainer::drawTexts(sf::RenderWindow& target)
 {
-    for (auto& c : char_texts) { target.draw(c); }
-    for (auto& s : string_texts) { target.draw(s); }
+    for (auto& c : m_char_texts) { target.draw(c); }
+    for (auto& s : m_string_texts) { target.draw(s); }
 }
 
 bool ui::CopyableTextContainer::checkForPress(const sf::Vector2f& mouse_pos, const sf::Event& event, HWND owner_hwnd)
 {
     bool has_text_been_clicked = false;
 
-    for (auto& c : char_texts) 
+    for (auto& c : m_char_texts) 
     { 
         if (c.getGlobalBounds().contains(mouse_pos) && event.mouseButton.button == sf::Mouse::Left)
         {
@@ -128,7 +121,7 @@ bool ui::CopyableTextContainer::checkForPress(const sf::Vector2f& mouse_pos, con
         }
     }
 
-    for (auto& s : string_texts) 
+    for (auto& s : m_string_texts) 
     { 
         if (s.getGlobalBounds().contains(mouse_pos) && event.mouseButton.button == sf::Mouse::Left)
         {
@@ -142,6 +135,6 @@ bool ui::CopyableTextContainer::checkForPress(const sf::Vector2f& mouse_pos, con
 
 void ui::CopyableTextContainer::checkForHover(const sf::Vector2f& mouse_pos)
 {
-    for (auto& c : char_texts) { c.checkForHover(mouse_pos); }
-    for (auto& s : string_texts) { s.checkForHover(mouse_pos); }
+    for (auto& c : m_char_texts) { c.checkForHover(mouse_pos); }
+    for (auto& s : m_string_texts) { s.checkForHover(mouse_pos); }
 }   

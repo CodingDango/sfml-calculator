@@ -15,7 +15,7 @@ namespace calc
         std::string input;
         std::string result_string;
 
-        double result;
+        long double result;
         char operation;
         bool is_operation_inputted;
 

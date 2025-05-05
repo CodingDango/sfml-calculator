@@ -101,41 +101,11 @@ CMakeFiles/calculator.dir/src/application.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/calculator.dir/src/application.cpp.s"
 	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Coding Programs\Code\C++\calculator\src\application.cpp" -o CMakeFiles\calculator.dir\src\application.cpp.s
 
-CMakeFiles/calculator.dir/src/ui_elements.cpp.obj: CMakeFiles/calculator.dir/flags.make
-CMakeFiles/calculator.dir/src/ui_elements.cpp.obj: CMakeFiles/calculator.dir/includes_CXX.rsp
-CMakeFiles/calculator.dir/src/ui_elements.cpp.obj: D:/Coding\ Programs/Code/C++/calculator/src/ui_elements.cpp
-CMakeFiles/calculator.dir/src/ui_elements.cpp.obj: CMakeFiles/calculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Coding Programs\Code\C++\calculator\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/calculator.dir/src/ui_elements.cpp.obj"
-	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/calculator.dir/src/ui_elements.cpp.obj -MF CMakeFiles\calculator.dir\src\ui_elements.cpp.obj.d -o CMakeFiles\calculator.dir\src\ui_elements.cpp.obj -c "D:\Coding Programs\Code\C++\calculator\src\ui_elements.cpp"
-
-CMakeFiles/calculator.dir/src/ui_elements.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/calculator.dir/src/ui_elements.cpp.i"
-	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Coding Programs\Code\C++\calculator\src\ui_elements.cpp" > CMakeFiles\calculator.dir\src\ui_elements.cpp.i
-
-CMakeFiles/calculator.dir/src/ui_elements.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/calculator.dir/src/ui_elements.cpp.s"
-	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Coding Programs\Code\C++\calculator\src\ui_elements.cpp" -o CMakeFiles\calculator.dir\src\ui_elements.cpp.s
-
-CMakeFiles/calculator.dir/src/utils.cpp.obj: CMakeFiles/calculator.dir/flags.make
-CMakeFiles/calculator.dir/src/utils.cpp.obj: CMakeFiles/calculator.dir/includes_CXX.rsp
-CMakeFiles/calculator.dir/src/utils.cpp.obj: D:/Coding\ Programs/Code/C++/calculator/src/utils.cpp
-CMakeFiles/calculator.dir/src/utils.cpp.obj: CMakeFiles/calculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Coding Programs\Code\C++\calculator\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/calculator.dir/src/utils.cpp.obj"
-	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/calculator.dir/src/utils.cpp.obj -MF CMakeFiles\calculator.dir\src\utils.cpp.obj.d -o CMakeFiles\calculator.dir\src\utils.cpp.obj -c "D:\Coding Programs\Code\C++\calculator\src\utils.cpp"
-
-CMakeFiles/calculator.dir/src/utils.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/calculator.dir/src/utils.cpp.i"
-	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Coding Programs\Code\C++\calculator\src\utils.cpp" > CMakeFiles\calculator.dir\src\utils.cpp.i
-
-CMakeFiles/calculator.dir/src/utils.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/calculator.dir/src/utils.cpp.s"
-	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Coding Programs\Code\C++\calculator\src\utils.cpp" -o CMakeFiles\calculator.dir\src\utils.cpp.s
-
 CMakeFiles/calculator.dir/src/core.cpp.obj: CMakeFiles/calculator.dir/flags.make
 CMakeFiles/calculator.dir/src/core.cpp.obj: CMakeFiles/calculator.dir/includes_CXX.rsp
 CMakeFiles/calculator.dir/src/core.cpp.obj: D:/Coding\ Programs/Code/C++/calculator/src/core.cpp
 CMakeFiles/calculator.dir/src/core.cpp.obj: CMakeFiles/calculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Coding Programs\Code\C++\calculator\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/calculator.dir/src/core.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Coding Programs\Code\C++\calculator\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/calculator.dir/src/core.cpp.obj"
 	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/calculator.dir/src/core.cpp.obj -MF CMakeFiles\calculator.dir\src\core.cpp.obj.d -o CMakeFiles\calculator.dir\src\core.cpp.obj -c "D:\Coding Programs\Code\C++\calculator\src\core.cpp"
 
 CMakeFiles/calculator.dir/src/core.cpp.i: cmake_force
@@ -150,7 +120,7 @@ CMakeFiles/calculator.dir/src/calc.cpp.obj: CMakeFiles/calculator.dir/flags.make
 CMakeFiles/calculator.dir/src/calc.cpp.obj: CMakeFiles/calculator.dir/includes_CXX.rsp
 CMakeFiles/calculator.dir/src/calc.cpp.obj: D:/Coding\ Programs/Code/C++/calculator/src/calc.cpp
 CMakeFiles/calculator.dir/src/calc.cpp.obj: CMakeFiles/calculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Coding Programs\Code\C++\calculator\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/calculator.dir/src/calc.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Coding Programs\Code\C++\calculator\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/calculator.dir/src/calc.cpp.obj"
 	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/calculator.dir/src/calc.cpp.obj -MF CMakeFiles\calculator.dir\src\calc.cpp.obj.d -o CMakeFiles\calculator.dir\src\calc.cpp.obj -c "D:\Coding Programs\Code\C++\calculator\src\calc.cpp"
 
 CMakeFiles/calculator.dir/src/calc.cpp.i: cmake_force
@@ -161,26 +131,11 @@ CMakeFiles/calculator.dir/src/calc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/calculator.dir/src/calc.cpp.s"
 	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Coding Programs\Code\C++\calculator\src\calc.cpp" -o CMakeFiles\calculator.dir\src\calc.cpp.s
 
-CMakeFiles/calculator.dir/src/input.cpp.obj: CMakeFiles/calculator.dir/flags.make
-CMakeFiles/calculator.dir/src/input.cpp.obj: CMakeFiles/calculator.dir/includes_CXX.rsp
-CMakeFiles/calculator.dir/src/input.cpp.obj: D:/Coding\ Programs/Code/C++/calculator/src/input.cpp
-CMakeFiles/calculator.dir/src/input.cpp.obj: CMakeFiles/calculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Coding Programs\Code\C++\calculator\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/calculator.dir/src/input.cpp.obj"
-	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/calculator.dir/src/input.cpp.obj -MF CMakeFiles\calculator.dir\src\input.cpp.obj.d -o CMakeFiles\calculator.dir\src\input.cpp.obj -c "D:\Coding Programs\Code\C++\calculator\src\input.cpp"
-
-CMakeFiles/calculator.dir/src/input.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/calculator.dir/src/input.cpp.i"
-	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Coding Programs\Code\C++\calculator\src\input.cpp" > CMakeFiles\calculator.dir\src\input.cpp.i
-
-CMakeFiles/calculator.dir/src/input.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/calculator.dir/src/input.cpp.s"
-	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Coding Programs\Code\C++\calculator\src\input.cpp" -o CMakeFiles\calculator.dir\src\input.cpp.s
-
 CMakeFiles/calculator.dir/src/clipboard.cpp.obj: CMakeFiles/calculator.dir/flags.make
 CMakeFiles/calculator.dir/src/clipboard.cpp.obj: CMakeFiles/calculator.dir/includes_CXX.rsp
 CMakeFiles/calculator.dir/src/clipboard.cpp.obj: D:/Coding\ Programs/Code/C++/calculator/src/clipboard.cpp
 CMakeFiles/calculator.dir/src/clipboard.cpp.obj: CMakeFiles/calculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Coding Programs\Code\C++\calculator\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/calculator.dir/src/clipboard.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Coding Programs\Code\C++\calculator\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/calculator.dir/src/clipboard.cpp.obj"
 	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/calculator.dir/src/clipboard.cpp.obj -MF CMakeFiles\calculator.dir\src\clipboard.cpp.obj.d -o CMakeFiles\calculator.dir\src\clipboard.cpp.obj -c "D:\Coding Programs\Code\C++\calculator\src\clipboard.cpp"
 
 CMakeFiles/calculator.dir/src/clipboard.cpp.i: cmake_force
@@ -191,28 +146,73 @@ CMakeFiles/calculator.dir/src/clipboard.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/calculator.dir/src/clipboard.cpp.s"
 	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Coding Programs\Code\C++\calculator\src\clipboard.cpp" -o CMakeFiles\calculator.dir\src\clipboard.cpp.s
 
+CMakeFiles/calculator.dir/src/ui_elements.cpp.obj: CMakeFiles/calculator.dir/flags.make
+CMakeFiles/calculator.dir/src/ui_elements.cpp.obj: CMakeFiles/calculator.dir/includes_CXX.rsp
+CMakeFiles/calculator.dir/src/ui_elements.cpp.obj: D:/Coding\ Programs/Code/C++/calculator/src/ui_elements.cpp
+CMakeFiles/calculator.dir/src/ui_elements.cpp.obj: CMakeFiles/calculator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Coding Programs\Code\C++\calculator\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/calculator.dir/src/ui_elements.cpp.obj"
+	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/calculator.dir/src/ui_elements.cpp.obj -MF CMakeFiles\calculator.dir\src\ui_elements.cpp.obj.d -o CMakeFiles\calculator.dir\src\ui_elements.cpp.obj -c "D:\Coding Programs\Code\C++\calculator\src\ui_elements.cpp"
+
+CMakeFiles/calculator.dir/src/ui_elements.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/calculator.dir/src/ui_elements.cpp.i"
+	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Coding Programs\Code\C++\calculator\src\ui_elements.cpp" > CMakeFiles\calculator.dir\src\ui_elements.cpp.i
+
+CMakeFiles/calculator.dir/src/ui_elements.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/calculator.dir/src/ui_elements.cpp.s"
+	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Coding Programs\Code\C++\calculator\src\ui_elements.cpp" -o CMakeFiles\calculator.dir\src\ui_elements.cpp.s
+
+CMakeFiles/calculator.dir/src/utils.cpp.obj: CMakeFiles/calculator.dir/flags.make
+CMakeFiles/calculator.dir/src/utils.cpp.obj: CMakeFiles/calculator.dir/includes_CXX.rsp
+CMakeFiles/calculator.dir/src/utils.cpp.obj: D:/Coding\ Programs/Code/C++/calculator/src/utils.cpp
+CMakeFiles/calculator.dir/src/utils.cpp.obj: CMakeFiles/calculator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Coding Programs\Code\C++\calculator\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/calculator.dir/src/utils.cpp.obj"
+	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/calculator.dir/src/utils.cpp.obj -MF CMakeFiles\calculator.dir\src\utils.cpp.obj.d -o CMakeFiles\calculator.dir\src\utils.cpp.obj -c "D:\Coding Programs\Code\C++\calculator\src\utils.cpp"
+
+CMakeFiles/calculator.dir/src/utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/calculator.dir/src/utils.cpp.i"
+	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Coding Programs\Code\C++\calculator\src\utils.cpp" > CMakeFiles\calculator.dir\src\utils.cpp.i
+
+CMakeFiles/calculator.dir/src/utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/calculator.dir/src/utils.cpp.s"
+	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Coding Programs\Code\C++\calculator\src\utils.cpp" -o CMakeFiles\calculator.dir\src\utils.cpp.s
+
+CMakeFiles/calculator.dir/src/input.cpp.obj: CMakeFiles/calculator.dir/flags.make
+CMakeFiles/calculator.dir/src/input.cpp.obj: CMakeFiles/calculator.dir/includes_CXX.rsp
+CMakeFiles/calculator.dir/src/input.cpp.obj: D:/Coding\ Programs/Code/C++/calculator/src/input.cpp
+CMakeFiles/calculator.dir/src/input.cpp.obj: CMakeFiles/calculator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Coding Programs\Code\C++\calculator\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/calculator.dir/src/input.cpp.obj"
+	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/calculator.dir/src/input.cpp.obj -MF CMakeFiles\calculator.dir\src\input.cpp.obj.d -o CMakeFiles\calculator.dir\src\input.cpp.obj -c "D:\Coding Programs\Code\C++\calculator\src\input.cpp"
+
+CMakeFiles/calculator.dir/src/input.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/calculator.dir/src/input.cpp.i"
+	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Coding Programs\Code\C++\calculator\src\input.cpp" > CMakeFiles\calculator.dir\src\input.cpp.i
+
+CMakeFiles/calculator.dir/src/input.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/calculator.dir/src/input.cpp.s"
+	"D:\Coding Programs\MSYS\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Coding Programs\Code\C++\calculator\src\input.cpp" -o CMakeFiles\calculator.dir\src\input.cpp.s
+
 # Object files for target calculator
 calculator_OBJECTS = \
 "CMakeFiles/calculator.dir/src/main.cpp.obj" \
 "CMakeFiles/calculator.dir/src/application.cpp.obj" \
-"CMakeFiles/calculator.dir/src/ui_elements.cpp.obj" \
-"CMakeFiles/calculator.dir/src/utils.cpp.obj" \
 "CMakeFiles/calculator.dir/src/core.cpp.obj" \
 "CMakeFiles/calculator.dir/src/calc.cpp.obj" \
-"CMakeFiles/calculator.dir/src/input.cpp.obj" \
-"CMakeFiles/calculator.dir/src/clipboard.cpp.obj"
+"CMakeFiles/calculator.dir/src/clipboard.cpp.obj" \
+"CMakeFiles/calculator.dir/src/ui_elements.cpp.obj" \
+"CMakeFiles/calculator.dir/src/utils.cpp.obj" \
+"CMakeFiles/calculator.dir/src/input.cpp.obj"
 
 # External object files for target calculator
 calculator_EXTERNAL_OBJECTS =
 
 calculator.exe: CMakeFiles/calculator.dir/src/main.cpp.obj
 calculator.exe: CMakeFiles/calculator.dir/src/application.cpp.obj
-calculator.exe: CMakeFiles/calculator.dir/src/ui_elements.cpp.obj
-calculator.exe: CMakeFiles/calculator.dir/src/utils.cpp.obj
 calculator.exe: CMakeFiles/calculator.dir/src/core.cpp.obj
 calculator.exe: CMakeFiles/calculator.dir/src/calc.cpp.obj
-calculator.exe: CMakeFiles/calculator.dir/src/input.cpp.obj
 calculator.exe: CMakeFiles/calculator.dir/src/clipboard.cpp.obj
+calculator.exe: CMakeFiles/calculator.dir/src/ui_elements.cpp.obj
+calculator.exe: CMakeFiles/calculator.dir/src/utils.cpp.obj
+calculator.exe: CMakeFiles/calculator.dir/src/input.cpp.obj
 calculator.exe: CMakeFiles/calculator.dir/build.make
 calculator.exe: D:/Coding\ Programs/MSYS/mingw64/lib/libsfml-graphics.dll.a
 calculator.exe: D:/Coding\ Programs/MSYS/mingw64/lib/libsfml-window.dll.a

@@ -14,8 +14,8 @@ void Application::runApp()
     while (m_window.isOpen())
     {
         processEvents();
-        updateSprites();
-        drawSprites();
+        updateUISprites();
+        drawUISprites();
     }
 }
 
@@ -51,36 +51,37 @@ void Application::processEvents()
                 m_copy_notification.setColor(utils::modifyColorOpacity(m_copy_notification.getColor(), 255));
             
             m_button_container.checkForPress(mouse_pos, event);
-  
+            m_copyable_text_container.updateAll();
+
             break;
 
         case (sf::Event::TextEntered):
             input::handleTextEntered(m_calc_operation, event);
-            std::cout << ++counter << '\n';
+            m_copyable_text_container.updateAll();
             break;
 
         case (sf::Event::KeyPressed):
             input::handleKeyPress(m_calc_operation, event);
+            m_copyable_text_container.updateAll();
             break;
         }
     }  
 }
 
-void Application::updateSprites()
+void Application::updateUISprites()
 {   
     sf::Vector2f mouse_pos ( sf::Mouse::getPosition(m_window) );
     float dt { m_clock.restart().asSeconds() };
 
     m_button_container.checkForHover(mouse_pos);
     m_copyable_text_container.checkForHover(mouse_pos);
-    m_copyable_text_container.updateAll();
-
+    
     // Update copy notification (lowers the opacity overtime)
     double new_opacity = m_copy_notification.getColor().a - (NOTIFICATION_FADE_SPEED_FACTOR * dt);
     m_copy_notification.setColor(utils::modifyColorOpacity(m_copy_notification.getColor(), new_opacity));
 }
 
-void Application::drawSprites()
+void Application::drawUISprites()
 {
     m_window.clear(BG_COLOR);
     m_button_container.drawButtons(m_window);

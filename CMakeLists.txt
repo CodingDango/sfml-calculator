@@ -32,12 +32,12 @@ add_executable(
   calculator 
   ./src/main.cpp 
   ./src/application.cpp
-  ./src/ui_elements.cpp 
-  ./src/utils.cpp 
   ./src/core.cpp 
   ./src/calc.cpp 
-  ./src/input.cpp
   ./src/clipboard.cpp
+  ./src/ui_elements.cpp 
+  ./src/utils.cpp 
+  ./src/input.cpp
 ) 
 
 target_include_directories(calculator PRIVATE includes)
