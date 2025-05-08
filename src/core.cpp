@@ -9,14 +9,9 @@ void core::prepareButtons(
   calc::CalculatorOperationContainer& calc_data
 )
 {
-  const sf::Vector2f STARTING_POINT = {19.60f, 200.0f};
-  const int MARGIN_X_PX = 27;
-  const int MARGIN_Y_PX = 20;
-  const int BUTTONS_PER_ROW = 4;
-
-  float X {STARTING_POINT.x};
-  float Y {STARTING_POINT.y};
-  int BUTTON_COUNTER {};
+  float current_x_pos_px { core::config::STARTING_POINT.x };
+  float current_y_pos_px { core::config::STARTING_POINT.y };
+  size_t button_counter { 0 };
 
   for (int i = 0; i < assets::button_initializers.size(); i++)
   {   
@@ -25,27 +20,26 @@ void core::prepareButtons(
       // Clear button
       if (i == 0)
       {
-          BUTTON_COUNTER += 2;
+          button_counter += 2;
           ui::Button clear_button { [&calc_data](){ calc_data.reset(); } };
           clear_button.setTexture(btn_initializer.texture);
-          clear_button.setPosition(STARTING_POINT);
+          clear_button.setPosition(core::config::STARTING_POINT);
           container.addButton(clear_button);
           continue;
-      } else 
+      } 
+      else 
           BUTTON_COUNTER++;
 
       // Updating X and Y values
-      if ((BUTTON_COUNTER - 1)% BUTTONS_PER_ROW == 0)
+      if ((button_counter - 1)% core::ui::BUTTONS_PER_ROW == 0)
       {   
           // Get height of last element and add the gap or magin
-          Y += (container.back().getTexture()->getSize().y) + MARGIN_Y_PX;    
-          X = STARTING_POINT.x;
+          Y += (container.back().getTexture()->getSize().y) + core::config::MARGIN_Y_PX;    
+          X = core::config::STARTING_POINT.x;
       } 
       else 
-      {
-          X += (container.back().getTexture()->getSize().x) + MARGIN_X_PX;
-      }
-
+          X += (container.back().getTexture()->getSize().x) + core::config::MARGIN_X_PX;
+      
       // Add button functionality
       ui::Button button;
       addButtonFunction(button, btn_initializer, calc_data);
@@ -61,11 +55,11 @@ void core::addButtonFunction(
   calc::CalculatorOperationContainer& calc_data
 )
 {   
-  const std::string btn_value = initializer.value;
+  const std::string& btn_value = initializer.value;
 
-  if (btn_value == "del") 
+  if (btn_value == "del")
       btn.setClickCallback([&calc_data](){ calc_data.backspace(); });
-
+  
   else if (btn_value == "=")
       btn.setClickCallback([&calc_data](){ calc_data.equal(); });
 

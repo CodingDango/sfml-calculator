@@ -11,6 +11,12 @@ namespace core
 {   
     namespace config 
     {
+        // -- Configuration for prepareButtons function --
+        inline static const sf::Vector2f STARTING_POINT { 19.60f, 200.0f };
+        inline static const int MARGIN_X_PX     = 27;
+        inline static const int MARGIN_Y_PX     = 20;
+        inline static const int BUTTONS_PER_ROW = 4;
+        
         // -- Configurations for prepareCopyableTexts --
 
         // All Texts
