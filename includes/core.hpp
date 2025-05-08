@@ -4,6 +4,7 @@
 #include "assets.hpp"
 #include "calc.hpp"
 #include "ui_elements.hpp"
+#include <cmath>
 
 #include <SFML/Graphics.hpp>
 
@@ -12,11 +13,12 @@ namespace core
     namespace config 
     {
         // -- Configuration for prepareButtons function --
-        inline static const sf::Vector2f STARTING_POINT { 19.60f, 200.0f };
+        inline static const sf::Vector2f GRID_STARTING_POINT { 20.0f, 200.0f };
+        inline static const sf::Vector2f BLOCK_SIZE { 120.0f, 100.0f };
+        inline static const int BLOCKS_PER_ROW  = 4;
         inline static const int MARGIN_X_PX     = 27;
         inline static const int MARGIN_Y_PX     = 20;
-        inline static const int BUTTONS_PER_ROW = 4;
-        
+
         // -- Configurations for prepareCopyableTexts --
 
         // All Texts

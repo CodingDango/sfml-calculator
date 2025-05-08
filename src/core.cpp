@@ -9,44 +9,31 @@ void core::prepareButtons(
   calc::CalculatorOperationContainer& calc_data
 )
 {
-  float current_x_pos_px { core::config::STARTING_POINT.x };
-  float current_y_pos_px { core::config::STARTING_POINT.y };
-  size_t button_counter { 0 };
+    int blocks_occupied = 0;
+    int current_col = 0;
+    int current_row = 0;
 
-  for (int i = 0; i < assets::button_initializers.size(); i++)
-  {   
-      const auto& btn_initializer = assets::button_initializers[i];
+    for (int i = 0; i < assets::button_initializers.size(); i++)
+    {   
+        const auto& btn_initializer = assets::button_initializers[i];
 
-      // Clear button
-      if (i == 0)
-      {
-          button_counter += 2;
-          ui::Button clear_button { [&calc_data](){ calc_data.reset(); } };
-          clear_button.setTexture(btn_initializer.texture);
-          clear_button.setPosition(core::config::STARTING_POINT);
-          container.addButton(clear_button);
-          continue;
-      } 
-      else 
-          BUTTON_COUNTER++;
+        int x_pos = core::config::GRID_STARTING_POINT.x + current_col * (core::config::BLOCK_SIZE.x + core::config::MARGIN_X_PX);
+        int y_pos = core::config::GRID_STARTING_POINT.y + current_row * (core::config::BLOCK_SIZE.y + core::config::MARGIN_Y_PX);
 
-      // Updating X and Y values
-      if ((button_counter - 1)% core::ui::BUTTONS_PER_ROW == 0)
-      {   
-          // Get height of last element and add the gap or magin
-          Y += (container.back().getTexture()->getSize().y) + core::config::MARGIN_Y_PX;    
-          X = core::config::STARTING_POINT.x;
-      } 
-      else 
-          X += (container.back().getTexture()->getSize().x) + core::config::MARGIN_X_PX;
-      
-      // Add button functionality
-      ui::Button button;
-      addButtonFunction(button, btn_initializer, calc_data);
-      button.setTexture(btn_initializer.texture);
-      button.setPosition({X, Y});
-      container.addButton(button);
-  }
+        const sf::Vector2u btn_texture_size = btn_initializer.texture.getSize();
+        int cols_taken_up = std::round(btn_texture_size.x / core::config::BLOCK_SIZE.x);
+
+        blocks_occupied += cols_taken_up;
+        current_col = (current_col + cols_taken_up) % core::config::BLOCKS_PER_ROW;
+        current_row = blocks_occupied / core::config::BLOCKS_PER_ROW;
+
+        ui::Button button;
+        button.setPosition(x_pos, y_pos);
+
+        button.setTexture(btn_initializer.texture);
+        core::addButtonFunction(button, btn_initializer, calc_data);
+        container.addButton(button);
+    }
 }
 
 void core::addButtonFunction(
