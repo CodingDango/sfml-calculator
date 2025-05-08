@@ -113,6 +113,8 @@
     "variant": "cpp",
     "iomanip": "cpp",
     "codecvt": "cpp",
-    "cstdarg": "cpp"
+    "cstdarg": "cpp",
+    "chrono": "cpp",
+    "ratio": "cpp"
   }
 }

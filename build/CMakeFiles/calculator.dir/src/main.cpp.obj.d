@@ -466,4 +466,10 @@ CMakeFiles/calculator.dir/src/main.cpp.obj: \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/array \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/compare \
- D:/Coding\ Programs/Code/C++/calculator/includes/input.hpp
+ D:/Coding\ Programs/Code/C++/calculator/includes/input.hpp \
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/chrono \
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/chrono.h \
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/ratio \
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/cstdint \
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/limits \
+ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/parse_numbers.h
