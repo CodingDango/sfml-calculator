@@ -482,9 +482,4 @@ CMakeFiles/calculator.dir/src/main.cpp.obj: \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/tr1/poly_hermite.tcc \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/tr1/poly_laguerre.tcc \
  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/tr1/riemann_zeta.tcc \
- D:/Coding\ Programs/Code/C++/calculator/includes/input.hpp \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/chrono \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/chrono.h \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/ratio \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/cstdint \
- D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/parse_numbers.h
+ D:/Coding\ Programs/Code/C++/calculator/includes/input.hpp

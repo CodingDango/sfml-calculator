@@ -1,5 +1,4 @@
 #include "application.hpp"
-#include <chrono>
 
 int main()
 {

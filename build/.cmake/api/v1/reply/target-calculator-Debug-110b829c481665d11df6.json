@@ -15,6 +15,7 @@
 		[
 			"add_executable",
 			"target_link_libraries",
+			"target_compile_options",
 			"target_include_directories"
 		],
 		"files" : 
@@ -29,19 +30,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 31,
+				"line" : 10,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 50,
+				"line" : 26,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 43,
+				"line" : 23,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 22,
 				"parent" : 0
 			}
 		]
@@ -52,13 +59,21 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=c++17"
+					"fragment" : "-g -std=gnu++17"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-O3"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-DNDEBUG"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"path" : "D:/Coding Programs/Code/C++/calculator/includes"
 				}
 			],

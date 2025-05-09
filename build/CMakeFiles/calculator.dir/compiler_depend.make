@@ -1799,7 +1799,6 @@ CMakeFiles/calculator.dir/src/main.cpp.obj: D:/Coding\ Programs/Code/C++/calcula
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/basic_string.tcc \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/char_traits.h \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/charconv.h \
-  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/chrono.h \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/codecvt.h \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/concept_check.h \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h \
@@ -1834,7 +1833,6 @@ CMakeFiles/calculator.dir/src/main.cpp.obj: D:/Coding\ Programs/Code/C++/calcula
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/node_handle.h \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/ostream.tcc \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/ostream_insert.h \
-  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/parse_numbers.h \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/postypes.h \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/predefined_ops.h \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/ptr_traits.h \
@@ -1876,14 +1874,12 @@ CMakeFiles/calculator.dir/src/main.cpp.obj: D:/Coding\ Programs/Code/C++/calcula
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/version.h \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/cctype \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/cerrno \
-  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/chrono \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/clocale \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/cmath \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/codecvt \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/compare \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/concepts \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/cstddef \
-  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/cstdint \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/cstdio \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/cstdlib \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/ctime \
@@ -1914,7 +1910,6 @@ CMakeFiles/calculator.dir/src/main.cpp.obj: D:/Coding\ Programs/Code/C++/calcula
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/pstl/execution_defs.h \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/pstl/glue_algorithm_defs.h \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/pstl/pstl_config.h \
-  D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/ratio \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/sstream \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/stdexcept \
   D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/stdlib.h \
@@ -2895,8 +2890,6 @@ CMakeFiles/calculator.dir/src/utils.cpp.obj: D:/Coding\ Programs/Code/C++/calcul
 
 D:/Coding\ Programs/Code/C++/calculator/src/utils.cpp:
 
-D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/chrono.h:
-
 D:/Coding\ Programs/Code/C++/calculator/src/input.cpp:
 
 D:/Coding\ Programs/Code/C++/calculator/src/core.cpp:
@@ -3024,8 +3017,6 @@ D:/Coding\ Programs/MSYS/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/amxin
 D:/Coding\ Programs/MSYS/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/avx512vlintrin.h:
 
 D:/Coding\ Programs/MSYS/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/amxcomplexintrin.h:
-
-D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/cstdint:
 
 D:/Coding\ Programs/MSYS/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/amxbf16intrin.h:
 
@@ -3537,8 +3528,6 @@ D:/Coding\ Programs/MSYS/mingw64/include/SFML/Graphics/RenderWindow.hpp:
 
 D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/stl_tree.h:
 
-D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/chrono:
-
 D:/Coding\ Programs/MSYS/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/tmmintrin.h:
 
 D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/tr1/beta_function.tcc:
@@ -3556,8 +3545,6 @@ D:/Coding\ Programs/MSYS/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/tsxld
 D:/Coding\ Programs/MSYS/mingw64/include/vadefs.h:
 
 D:/Coding\ Programs/MSYS/mingw64/include/_mingw_stdarg.h:
-
-D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/ratio:
 
 D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/ios:
 
@@ -3674,8 +3661,6 @@ D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/locale_classes.tcc:
 D:/Coding\ Programs/MSYS/mingw64/include/SFML/Graphics/Glsl.hpp:
 
 D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/stl_heap.h:
-
-D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/parse_numbers.h:
 
 D:/Coding\ Programs/MSYS/mingw64/include/c++/14.2.0/bits/locale_facets.h:
 

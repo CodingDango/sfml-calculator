@@ -1805,7 +1805,6 @@ CMakeFiles/calculator.dir/src/main.cpp.obj
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/bits/basic_string.tcc
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/bits/char_traits.h
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/bits/charconv.h
- D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/bits/chrono.h
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/bits/codecvt.h
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/bits/concept_check.h
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h
@@ -1840,7 +1839,6 @@ CMakeFiles/calculator.dir/src/main.cpp.obj
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/bits/node_handle.h
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/bits/ostream.tcc
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/bits/ostream_insert.h
- D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/bits/parse_numbers.h
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/bits/postypes.h
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/bits/predefined_ops.h
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/bits/ptr_traits.h
@@ -1882,14 +1880,12 @@ CMakeFiles/calculator.dir/src/main.cpp.obj
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/bits/version.h
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/cctype
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/cerrno
- D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/chrono
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/clocale
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/cmath
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/codecvt
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/compare
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/concepts
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/cstddef
- D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/cstdint
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/cstdio
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/cstdlib
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/ctime
@@ -1920,7 +1916,6 @@ CMakeFiles/calculator.dir/src/main.cpp.obj
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/pstl/execution_defs.h
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/pstl/glue_algorithm_defs.h
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/pstl/pstl_config.h
- D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/ratio
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/sstream
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/stdexcept
  D:/Coding Programs/MSYS/mingw64/include/c++/14.2.0/stdlib.h

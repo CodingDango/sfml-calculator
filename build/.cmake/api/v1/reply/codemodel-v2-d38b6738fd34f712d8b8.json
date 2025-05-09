@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "MySFMLApp",
+					"name" : "SFMLCalculator",
 					"targetIndexes" : 
 					[
 						0
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "calculator::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-calculator-Debug-73c4a39609489e3a433e.json",
+					"jsonFile" : "target-calculator-Debug-110b829c481665d11df6.json",
 					"name" : "calculator",
 					"projectIndex" : 0
 				}

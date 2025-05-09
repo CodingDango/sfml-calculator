@@ -130,7 +130,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=MySFMLApp
+CMAKE_PROJECT_NAME:STATIC=SFMLCalculator
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=D:/Coding Programs/MSYS/mingw64/bin/ranlib.exe
@@ -223,6 +223,15 @@ MySFMLApp_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 MySFMLApp_SOURCE_DIR:STATIC=D:/Coding Programs/Code/C++/calculator
+
+//Value Computed by CMake
+SFMLCalculator_BINARY_DIR:STATIC=D:/Coding Programs/Code/C++/calculator/build
+
+//Value Computed by CMake
+SFMLCalculator_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+SFMLCalculator_SOURCE_DIR:STATIC=D:/Coding Programs/Code/C++/calculator
 
 //The directory containing a CMake configuration file for SFML.
 SFML_DIR:PATH=D:/Coding Programs/MSYS/mingw64/lib/cmake/SFML
