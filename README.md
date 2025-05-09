@@ -34,7 +34,7 @@ It's only for fun, even though the project idea is trivial
 
 ## Copying to clipboard:
 
-    - Just <b>click on the texts<b> (which aren't buttons) and it will be copied onto the clipboard.
+    - Just **click on the texts** (which aren't buttons) and it will be copied onto the clipboard.
 
 ## Requirements
 - ✅ Numbers now use long long and double long, and now use stringstream to deal with number overflowing. (Dealing it with myself is too confusing.)
