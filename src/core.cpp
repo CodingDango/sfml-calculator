@@ -9,23 +9,24 @@ void core::prepareButtons(
   calc::CalculatorOperationContainer& calc_data
 )
 {
-    int blocks_occupied = 0;
     int current_col = 0;
     int current_row = 0;
 
-    for (int i = 0; i < assets::button_initializers.size(); i++)
+    for (const auto& btn_initializer : assets::button_initializers)
     {   
-        const auto& btn_initializer = assets::button_initializers[i];
-
-        int x_pos = core::config::GRID_STARTING_POINT.x + current_col * (core::config::BLOCK_SIZE.x + core::config::MARGIN_X_PX);
-        int y_pos = core::config::GRID_STARTING_POINT.y + current_row * (core::config::BLOCK_SIZE.y + core::config::MARGIN_Y_PX);
-
         const sf::Vector2u btn_texture_size = btn_initializer.texture.getSize();
         int cols_taken_up = std::round(btn_texture_size.x / core::config::BLOCK_SIZE.x);
+        if (cols_taken_up == 0) cols_taken_up = 1;
 
-        blocks_occupied += cols_taken_up;
-        current_col = (current_col + cols_taken_up) % core::config::BLOCKS_PER_ROW;
-        current_row = blocks_occupied / core::config::BLOCKS_PER_ROW;
+        // Check if overflow
+        if ((current_col + cols_taken_up) > core::config::BLOCKS_PER_ROW)
+        {
+            current_col = 0;
+            current_row += 1;
+        }
+        
+        int x_pos = core::config::GRID_STARTING_POINT.x + current_col * (core::config::BLOCK_SIZE.x + core::config::MARGIN_X_PX);
+        int y_pos = core::config::GRID_STARTING_POINT.y + current_row * (core::config::BLOCK_SIZE.y + core::config::MARGIN_Y_PX);
 
         ui::Button button;
         button.setPosition(x_pos, y_pos);
@@ -33,6 +34,8 @@ void core::prepareButtons(
         button.setTexture(btn_initializer.texture);
         core::addButtonFunction(button, btn_initializer, calc_data);
         container.addButton(button);
+
+        current_col += cols_taken_up;
     }
 }
 
