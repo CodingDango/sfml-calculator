@@ -34,7 +34,7 @@ It's only for fun, even though the project idea is trivial
 
 ## Copying to clipboard:
 
-    - Just click on the texts (which aren't buttons) and it will be copied onto the clipboard.
+    - Just <b>click on the texts<b> (which aren't buttons) and it will be copied onto the clipboard.
 
 ## Requirements
 - ✅ Numbers now use long long and double long, and now use stringstream to deal with number overflowing. (Dealing it with myself is too confusing.)
@@ -49,6 +49,6 @@ It's only for fun, even though the project idea is trivial
 # Changes to be made
 1. (!DONE) Clean up the main function (Encapsulate It) 
 2. (!DONE) Changes to the notification sprite.
-  - the position of the notification png, should be below the operator character. not left to it.
-  - The design, make it more horizontal
+  - the position of the notification png, should be below the operator character.
+  - it should be an image rather than pure text.
 3. (!Scrapped, I prefer the current structure) Create a base pure base class UIEntity, since currently all entities require hovering, clicking, and updating.
